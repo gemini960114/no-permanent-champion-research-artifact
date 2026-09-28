@@ -1,0 +1,3 @@
+<containers>/sglang_0.5.20.sif
+<containers>/vllm_0.29.1rc1.sif
+<containers>/vllm_glm53-flash.sif

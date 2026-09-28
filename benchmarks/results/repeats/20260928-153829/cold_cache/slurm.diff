@@ -1,0 +1,9 @@
+5c5,6
+< #SBATCH --job-name=vllm_glm53_flash
+---
+> #SBATCH --job-name=abcold_kda_vllm
+> #SBATCH --exclude=node-20
+182c183
+<   export SINGULARITYENV_TILELANG_CACHE_DIR="$VLLM_CACHE_DIR/tilelang"
+---
+>   export SINGULARITYENV_TILELANG_CACHE_DIR="<cache>/abcold/20260928-153829/rep1/tilelang"

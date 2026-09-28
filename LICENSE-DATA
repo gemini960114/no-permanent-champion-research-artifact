@@ -1,0 +1,18 @@
+Data, logs, configurations, and documentation in this repository
+(benchmarks/results/, benchmarks/repeats/conditions/, engines/KNOWN_GOOD.md,
+the skill instructions and documentation in .agents/skills/ (SKILL.md, README.md),
+README.md, MANIFEST.md) are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+Executable scripts, including those under .agents/skills/*/scripts/, are not covered
+by this license; they are licensed under the MIT License (see LICENSE).
+
+Copyright (c) 2026 Chao-Chun Chuang, Po-Hsiang Lin, and Liang-Hsun Huang
+
+You are free to share and adapt the material for any purpose, provided you give
+appropriate credit, provide a link to the license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+All code, including every executable script, is licensed under the MIT License (see LICENSE).
+The manuscript in paper/ is not covered by either license.

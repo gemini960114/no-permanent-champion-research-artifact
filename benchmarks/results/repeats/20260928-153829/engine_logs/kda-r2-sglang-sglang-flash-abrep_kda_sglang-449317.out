@@ -1,0 +1,14 @@
+==================================================================
+🚀 SGLang GLM-5.3-Flash 服務正在啟動
+==================================================================
+🔹 Job ID       : 449317
+🔹 執行節點     : node-20 (10.0.1.2)
+🔹 GPU 資源     : 8x H200 GPU (TP8+EP8)
+🔹 模型路徑     : <models>/GLM-5.3-Flash
+🔹 容器映像檔   : <containers>/sglang_0.5.20.sif
+🔹 服務端點     : http://node-20:35000 (內網 IP: http://10.0.1.2:35000)
+🔹 Port Lock    : <repo>/runtime/port-locks/node-20-35000
+🔹 開始時間     : Mon Sep 28 06:49:45 PM CST 2026
+==================================================================
+🔹 執行啟動指令: /usr/bin/singularity exec --nv --bind /work:/work <containers>/sglang_0.5.20.sif /opt/sglang/bin/sglang serve --model-path <models>/GLM-5.3-Flash --tp 8 --ep 8 --mem-fraction-static 0.75 --dsa-prefill-backend tilelang --dsa-decode-backend tilelang --kv-cache-dtype bfloat16 --moe-runner-backend deep_gemm --reasoning-parser auto --tool-call-parser auto --host 0.0.0.0 --port 35000 --speculative-algorithm EAGLE --speculative-num-steps 5 --speculative-eagle-topk 1 --speculative-num-draft-tokens 6 --api-key <masked>
+🛑 sglang_glm53_flash 服務正在停止 (Job: 449317)...

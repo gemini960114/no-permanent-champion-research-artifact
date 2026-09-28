@@ -1,0 +1,466 @@
+[2026-09-28 15:38:29] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 15:38:30] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense,moe,kda、回合 r1,r2、每條件 5 次）
+[2026-09-28 15:38:31] 🔏 背景計算 SIF sha256 → image_sha256.txt
+[2026-09-28 15:38:31] ════ Phase dense / r1 ════
+[2026-09-28 15:38:32]    🚀 dense-sglang-r1 派送 Job 448885
+[2026-09-28 15:38:32]    🚀 dense-vllm-r1 派送 Job 448886
+[2026-09-28 15:44:52]    ✅ Job 448885 READY @ node-16:30000
+[2026-09-28 15:44:52]    ✅ Job 448886 READY @ node-01:36000
+[2026-09-28 15:44:52] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 15:45:15]    ▶ dense-r1-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 15:45:19]      success 100.0% · 2241 tok/s · P95 1.8s · tokens 4096
+[2026-09-28 15:45:19]    ▶ dense-r1-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 15:45:27]      success 100.0% · 1917 tok/s · P95 2.1s · tokens 4096
+[2026-09-28 15:46:27]    ▶ dense-r1-sglang-rep1（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:47:24]      success 100.0% · 3927 tok/s · P95 50.6s · tokens 209443
+[2026-09-28 15:48:24]    ▶ dense-r1-vllm-rep1（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:49:24]      success 100.0% · 3577 tok/s · P95 55.3s · tokens 207941
+[2026-09-28 15:50:24]    ▶ dense-r1-vllm-rep2（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:51:25]      success 100.0% · 3587 tok/s · P95 55.1s · tokens 208018
+[2026-09-28 15:52:25]    ▶ dense-r1-sglang-rep2（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:53:21]      success 100.0% · 3908 tok/s · P95 50.7s · tokens 208675
+[2026-09-28 15:54:21]    ▶ dense-r1-sglang-rep3（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:55:17]      success 100.0% · 3841 tok/s · P95 51.4s · tokens 208108
+[2026-09-28 15:56:17]    ▶ dense-r1-vllm-rep3（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:56:28]      ❌ 無結果檔（client rc=0，見 raw/dense-r1-vllm-rep3.client.log）
+[2026-09-28 15:57:28]    ▶ dense-r1-vllm-rep4（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 15:58:28]      success 100.0% · 3572 tok/s · P95 55.0s · tokens 207565
+[2026-09-28 15:59:28]    ▶ dense-r1-sglang-rep4（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:00:23]      success 100.0% · 3881 tok/s · P95 50.5s · tokens 207334
+[2026-09-28 16:01:23]    ▶ dense-r1-sglang-rep5（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:02:19]      success 100.0% · 3855 tok/s · P95 51.2s · tokens 208009
+[2026-09-28 16:03:19]    ▶ dense-r1-vllm-rep5（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:04:20]      success 100.0% · 3600 tok/s · P95 55.1s · tokens 207559
+[2026-09-28 16:04:30] ✅ Phase dense / r1 完成
+[2026-09-28 16:04:30] ════ Phase dense / r2 ════
+[2026-09-28 16:04:30]    🚀 dense-sglang-r2 派送 Job 448918
+[2026-09-28 16:04:30]    🚀 dense-vllm-r2 派送 Job 448919
+[2026-09-28 16:06:11]    ❌ Job 448918 已結束且未就緒（見 <repo>/engines/_abrep-dense-sglang/logs/）
+[2026-09-28 16:07:31]    ✅ Job 448919 READY @ node-23:36000
+[2026-09-28 16:07:36] ❌ Phase dense/r2 失敗（引擎未就緒或路由缺失）；可用 --run-id 20260928-153829 續跑
+[2026-09-28 16:08:57] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 16:08:58] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense,moe,kda、回合 r1,r2、每條件 5 次）
+[2026-09-28 16:08:59] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 16:08:59] ════ Phase dense / r1 ════
+[2026-09-28 16:08:59]    🚀 dense-sglang-r1 派送 Job 448929
+[2026-09-28 16:08:59]    🚀 dense-vllm-r1 派送 Job 448930
+[2026-09-28 16:15:00]    ✅ Job 448929 READY @ node-16:30000
+[2026-09-28 16:15:00]    ✅ Job 448930 READY @ node-22:36000
+[2026-09-28 16:15:00] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 16:16:21]    ▶ dense-r1-vllm-rep3（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:17:24]      success 100.0% · 3372 tok/s · P95 58.8s · tokens 207765
+[2026-09-28 16:17:39] ✅ Phase dense / r1 完成
+[2026-09-28 16:17:39] ════ Phase dense / r2 ════
+[2026-09-28 16:17:40]    🚀 dense-sglang-r2 派送 Job 448968
+[2026-09-28 16:17:40]    🚀 dense-vllm-r2 派送 Job 448969
+[2026-09-28 16:24:00]    ✅ Job 448968 READY @ node-16:30000
+[2026-09-28 16:24:00]    ✅ Job 448969 READY @ node-09:36000
+[2026-09-28 16:24:00] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 16:24:17]    ▶ dense-r2-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 16:24:21]      success 100.0% · 1545 tok/s · P95 2.5s · tokens 4096
+[2026-09-28 16:24:21]    ▶ dense-r2-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 16:24:24]      success 100.0% · 1952 tok/s · P95 2.0s · tokens 4096
+[2026-09-28 16:25:25]    ▶ dense-r2-sglang-rep1（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:26:55]      success 100.0% · 2359 tok/s · P95 85.8s · tokens 209013
+[2026-09-28 16:27:55]    ▶ dense-r2-vllm-rep1（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:29:00]      success 100.0% · 3270 tok/s · P95 61.2s · tokens 207673
+[2026-09-28 16:30:01]    ▶ dense-r2-vllm-rep2（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:31:05]      success 100.0% · 3303 tok/s · P95 61.1s · tokens 206785
+[2026-09-28 16:32:05]    ▶ dense-r2-sglang-rep2（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:33:35]      success 100.0% · 2351 tok/s · P95 85.0s · tokens 207902
+[2026-09-28 16:34:35]    ▶ dense-r2-sglang-rep3（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:36:06]      success 100.0% · 2344 tok/s · P95 86.4s · tokens 209250
+[2026-09-28 16:37:06]    ▶ dense-r2-vllm-rep3（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:38:11]      success 100.0% · 3300 tok/s · P95 61.6s · tokens 206800
+[2026-09-28 16:39:11]    ▶ dense-r2-vllm-rep4（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:40:15]      success 100.0% · 3321 tok/s · P95 60.6s · tokens 206472
+[2026-09-28 16:41:15]    ▶ dense-r2-sglang-rep4（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:42:45]      success 100.0% · 2332 tok/s · P95 85.9s · tokens 206208
+[2026-09-28 16:43:45]    ▶ dense-r2-sglang-rep5（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:45:15]      success 100.0% · 2354 tok/s · P95 85.0s · tokens 207092
+[2026-09-28 16:46:15]    ▶ dense-r2-vllm-rep5（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 16:47:19]      success 100.0% · 3326 tok/s · P95 61.3s · tokens 208511
+[2026-09-28 16:47:30] ✅ Phase dense / r2 完成
+[2026-09-28 16:47:30] ════ Phase moe / r1 ════
+[2026-09-28 16:47:30]    🚀 moe-sglang-r1 派送 Job 449017
+[2026-09-28 16:47:30]    🚀 moe-vllm-r1 派送 Job 449018
+[2026-09-28 16:51:30]    ✅ Job 449017 READY @ node-05:32000
+[2026-09-28 16:53:11]    ✅ Job 449018 READY @ node-09:37000
+[2026-09-28 16:53:11] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 16:53:31]    ▶ moe-r1-sglang-warmup（abrep-moe-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 16:53:34]      success 100.0% · 2179 tok/s · P95 1.9s · tokens 4096
+[2026-09-28 16:53:34]    ▶ moe-r1-vllm-warmup（abrep-moe-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 16:53:37]      success 100.0% · 2541 tok/s · P95 1.6s · tokens 4096
+[2026-09-28 16:54:37]    ▶ moe-r1-sglang-rep1（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 16:57:22]      success 100.0% · 3165 tok/s · P95 159.3s · tokens 515461
+[2026-09-28 16:58:22]    ▶ moe-r1-vllm-rep1（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 16:59:29]      success 100.0% · 8001 tok/s · P95 62.4s · tokens 522153
+[2026-09-28 17:00:29]    ▶ moe-r1-vllm-rep2（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:01:37]      success 100.0% · 7881 tok/s · P95 63.3s · tokens 521917
+[2026-09-28 17:02:37]    ▶ moe-r1-sglang-rep2（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:05:11]      success 100.0% · 3373 tok/s · P95 149.0s · tokens 513801
+[2026-09-28 17:06:12]    ▶ moe-r1-sglang-rep3（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:08:50]      success 100.0% · 3287 tok/s · P95 153.8s · tokens 515294
+[2026-09-28 17:09:51]    ▶ moe-r1-vllm-rep3（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:10:57]      success 100.0% · 7945 tok/s · P95 62.9s · tokens 520074
+[2026-09-28 17:11:58]    ▶ moe-r1-vllm-rep4（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:13:08]      success 100.0% · 7729 tok/s · P95 65.1s · tokens 527525
+[2026-09-28 17:14:08]    ▶ moe-r1-sglang-rep4（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:16:45]      success 100.0% · 3314 tok/s · P95 151.8s · tokens 513757
+[2026-09-28 17:17:45]    ▶ moe-r1-sglang-rep5（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:20:21]      success 100.0% · 3356 tok/s · P95 151.8s · tokens 519323
+[2026-09-28 17:21:22]    ▶ moe-r1-vllm-rep5（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:22:28]      success 100.0% · 8048 tok/s · P95 62.4s · tokens 520928
+[2026-09-28 17:22:38] ✅ Phase moe / r1 完成
+[2026-09-28 17:22:38] ════ Phase moe / r2 ════
+[2026-09-28 17:22:38]    🚀 moe-sglang-r2 派送 Job 449145
+[2026-09-28 17:22:39]    🚀 moe-vllm-r2 派送 Job 449146
+[2026-09-28 17:25:59]    ✅ Job 449145 READY @ node-05:32000
+[2026-09-28 17:28:19]    ✅ Job 449146 READY @ node-09:37000
+[2026-09-28 17:28:19] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 17:28:40]    ▶ moe-r2-sglang-warmup（abrep-moe-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 17:28:43]      success 100.0% · 2471 tok/s · P95 1.6s · tokens 4096
+[2026-09-28 17:28:43]    ▶ moe-r2-vllm-warmup（abrep-moe-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 17:28:46]      success 100.0% · 2644 tok/s · P95 1.5s · tokens 4096
+[2026-09-28 17:29:46]    ▶ moe-r2-sglang-rep1（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:32:07]      success 100.0% · 3740 tok/s · P95 137.1s · tokens 522270
+[2026-09-28 17:33:07]    ▶ moe-r2-vllm-rep1（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:35:11]      success 100.0% · 4253 tok/s · P95 120.5s · tokens 520931
+[2026-09-28 17:36:12]    ▶ moe-r2-vllm-rep2（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:38:17]      success 100.0% · 4235 tok/s · P95 121.2s · tokens 521480
+[2026-09-28 17:39:17]    ▶ moe-r2-sglang-rep2（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:41:30]      success 100.0% · 3953 tok/s · P95 129.7s · tokens 522128
+[2026-09-28 17:42:31]    ▶ moe-r2-sglang-rep3（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:44:42]      success 100.0% · 4018 tok/s · P95 127.5s · tokens 521597
+[2026-09-28 17:45:43]    ▶ moe-r2-vllm-rep3（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:47:40]      success 100.0% · 4515 tok/s · P95 113.7s · tokens 522064
+[2026-09-28 17:48:40]    ▶ moe-r2-vllm-rep4（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:50:38]      success 100.0% · 4498 tok/s · P95 113.7s · tokens 521649
+[2026-09-28 17:51:38]    ▶ moe-r2-sglang-rep4（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:53:49]      success 99.8% · 4031 tok/s · P95 126.8s · tokens 521935
+[2026-09-28 17:54:49]    ▶ moe-r2-sglang-rep5（abrep-moe-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 17:57:04]      success 100.0% · 3910 tok/s · P95 130.6s · tokens 519158
+[2026-09-28 17:58:04]    ▶ moe-r2-vllm-rep5（abrep-moe-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:00:03]      success 100.0% · 4467 tok/s · P95 115.3s · tokens 523823
+[2026-09-28 18:00:13] ✅ Phase moe / r2 完成
+[2026-09-28 18:00:13] ════ Phase kda / r1 ════
+[2026-09-28 18:00:13]    🚀 kda-sglang-r1 派送 Job 449199
+[2026-09-28 18:00:14]    🚀 kda-vllm-r1 派送 Job 449200
+[2026-09-28 18:06:14]    ✅ Job 449199 READY @ node-11:35000
+[2026-09-28 18:09:14]    ✅ Job 449200 READY @ node-12:38000
+[2026-09-28 18:09:14] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 18:09:35]    ▶ kda-r1-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 18:09:38]      success 100.0% · 2010 tok/s · P95 2.0s · tokens 4096
+[2026-09-28 18:09:39]    ▶ kda-r1-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 18:09:43]      success 100.0% · 1406 tok/s · P95 2.9s · tokens 4096
+[2026-09-28 18:10:43]    ▶ kda-r1-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:14:08]      success 100.0% · 3607 tok/s · P95 198.0s · tokens 733444
+[2026-09-28 18:15:08]    ▶ kda-r1-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:17:53]      success 100.0% · 4505 tok/s · P95 157.5s · tokens 733530
+[2026-09-28 18:18:53]    ▶ kda-r1-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:21:25]      success 100.0% · 4867 tok/s · P95 145.5s · tokens 733280
+[2026-09-28 18:22:26]    ▶ kda-r1-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:25:48]      success 100.0% · 3639 tok/s · P95 195.7s · tokens 730227
+[2026-09-28 18:26:48]    ▶ kda-r1-sglang-rep3（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:30:05]      success 100.0% · 3760 tok/s · P95 189.9s · tokens 733672
+[2026-09-28 18:31:05]    ▶ kda-r1-vllm-rep3（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:33:50]      success 100.0% · 4494 tok/s · P95 158.1s · tokens 734604
+[2026-09-28 18:34:51]    ▶ kda-r1-vllm-rep4（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:37:23]      success 100.0% · 4835 tok/s · P95 145.6s · tokens 731086
+[2026-09-28 18:38:24]    ▶ kda-r1-sglang-rep4（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:41:40]      success 100.0% · 3762 tok/s · P95 189.3s · tokens 733301
+[2026-09-28 18:42:41]    ▶ kda-r1-sglang-rep5（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:46:02]      success 100.0% · 3665 tok/s · P95 194.5s · tokens 734390
+[2026-09-28 18:47:03]    ▶ kda-r1-vllm-rep5（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 18:49:34]      success 100.0% · 4893 tok/s · P95 144.6s · tokens 733676
+[2026-09-28 18:49:44] ✅ Phase kda / r1 完成
+[2026-09-28 18:49:44] ════ Phase kda / r2 ════
+[2026-09-28 18:49:45]    🚀 kda-sglang-r2 派送 Job 449317
+[2026-09-28 18:49:45]    🚀 kda-vllm-r2 派送 Job 449318
+[2026-09-28 18:50:25]    ❌ Job 449317 已結束且未就緒（見 <repo>/engines/_abrep-kda-sglang/logs/）
+[2026-09-28 18:59:40]    ✅ Job 449318 READY @ node-21:38000
+[2026-09-28 18:59:45] ❌ Phase kda/r2 失敗（引擎未就緒或路由缺失）；可用 --run-id 20260928-153829 續跑
+[2026-09-28 19:00:07] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 19:00:08] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r2、每條件 5 次）
+[2026-09-28 19:00:09] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 19:00:09] ════ Phase kda / r2 ════
+[2026-09-28 19:00:09]    🚀 kda-sglang-r2 派送 Job 449340
+[2026-09-28 19:00:09]    🚀 kda-vllm-r2 派送 Job 449341
+[2026-09-28 19:01:09] ⚠️ 收到中斷訊號
+[2026-09-28 19:01:09] 🧹 中止時取消 Job 449340
+[2026-09-28 19:01:09] 🧹 中止時取消 Job 449341
+[2026-09-28 19:01:56] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 19:01:57] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r2、每條件 5 次）
+[2026-09-28 19:01:57] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 19:01:57] ════ Phase kda / r2 ════
+[2026-09-28 19:01:57]    🚀 kda-sglang-r2 派送 Job 449342
+[2026-09-28 19:01:58]    🚀 kda-vllm-r2 派送 Job 449343
+[2026-09-28 19:08:18]    ✅ Job 449342 READY @ node-04:35000
+[2026-09-28 19:11:38]    ✅ Job 449343 READY @ node-17:38000
+[2026-09-28 19:11:38] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 19:12:01]    ▶ kda-r2-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 19:12:05]      success 100.0% · 1953 tok/s · P95 2.0s · tokens 4096
+[2026-09-28 19:12:05]    ▶ kda-r2-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 19:12:16]      success 100.0% · 399 tok/s · P95 8.4s · tokens 4096
+[2026-09-28 19:13:17]    ▶ kda-r2-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:16:54]      success 100.0% · 3400 tok/s · P95 211.7s · tokens 733584
+[2026-09-28 19:17:54]    ▶ kda-r2-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:22:57]      success 89.5% · 2167 tok/s · P95 286.4s · tokens 653823
+[2026-09-28 19:23:58]    ▶ kda-r2-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:29:01]      success 96.9% · 2350 tok/s · P95 297.6s · tokens 709108
+[2026-09-28 19:30:02]    ▶ kda-r2-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:33:36]      success 100.0% · 3446 tok/s · P95 209.9s · tokens 734965
+[2026-09-28 19:34:37]    ▶ kda-r2-sglang-rep3（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:38:20]      success 100.0% · 3300 tok/s · P95 218.4s · tokens 732394
+[2026-09-28 19:39:21]    ▶ kda-r2-vllm-rep3（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:44:24]      success 94.8% · 2288 tok/s · P95 295.5s · tokens 690176
+[2026-09-28 19:45:24]    ▶ kda-r2-vllm-rep4（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:50:24]      success 100.0% · 2455 tok/s · P95 294.8s · tokens 732444
+[2026-09-28 19:51:24]    ▶ kda-r2-sglang-rep4（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:55:07]      success 100.0% · 3323 tok/s · P95 217.9s · tokens 735526
+[2026-09-28 19:56:08]    ▶ kda-r2-sglang-rep5（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 19:59:48]      success 100.0% · 3342 tok/s · P95 215.7s · tokens 731759
+[2026-09-28 20:00:49]    ▶ kda-r2-vllm-rep5（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 20:05:52]      success 98.3% · 2379 tok/s · P95 297.5s · tokens 717680
+[2026-09-28 20:06:27] ✅ Phase kda / r2 完成
+[2026-09-28 20:06:27] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 20:06:47] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-28 20:06:47] 🏁 全部完成
+[2026-09-28 20:06:47] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 20:06:48] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 r1c48、每條件 5 次）
+[2026-09-28 20:06:48] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 20:06:48] ════ Phase dense / r1c48 ════
+[2026-09-28 20:06:48]    🚀 dense-sglang-r1c48 派送 Job 449482
+[2026-09-28 20:06:49]    🚀 dense-vllm-r1c48 派送 Job 449483
+[2026-09-28 20:12:49]    ✅ Job 449482 READY @ node-28:30000
+[2026-09-28 20:12:49]    ✅ Job 449483 READY @ node-28:36000
+[2026-09-28 20:12:49] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 20:13:00]    ▶ dense-r1c48-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 20:13:04]      success 100.0% · 1358 tok/s · P95 3.0s · tokens 4096
+[2026-09-28 20:13:05]    ▶ dense-r1c48-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 20:13:09]      success 100.0% · 1249 tok/s · P95 3.3s · tokens 4096
+[2026-09-28 20:14:09]    ▶ dense-r1c48-sglang-rep1（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:15:52]      success 100.0% · 2050 tok/s · P95 96.7s · tokens 207526
+[2026-09-28 20:16:53]    ▶ dense-r1c48-vllm-rep1（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:18:43]      success 100.0% · 1895 tok/s · P95 104.7s · tokens 207327
+[2026-09-28 20:19:44]    ▶ dense-r1c48-vllm-rep2（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:21:33]      success 100.0% · 1914 tok/s · P95 104.6s · tokens 206564
+[2026-09-28 20:22:34]    ▶ dense-r1c48-sglang-rep2（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:24:16]      success 100.0% · 2050 tok/s · P95 96.3s · tokens 207380
+[2026-09-28 20:25:17]    ▶ dense-r1c48-sglang-rep3（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:27:00]      success 100.0% · 2033 tok/s · P95 98.1s · tokens 207940
+[2026-09-28 20:28:01]    ▶ dense-r1c48-vllm-rep3（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:29:51]      success 100.0% · 1900 tok/s · P95 104.4s · tokens 207615
+[2026-09-28 20:30:52]    ▶ dense-r1c48-vllm-rep4（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:32:40]      success 100.0% · 1956 tok/s · P95 101.7s · tokens 208119
+[2026-09-28 20:33:40]    ▶ dense-r1c48-sglang-rep4（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:35:23]      success 100.0% · 2037 tok/s · P95 96.5s · tokens 206524
+[2026-09-28 20:36:23]    ▶ dense-r1c48-sglang-rep5（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:38:06]      success 100.0% · 2059 tok/s · P95 96.7s · tokens 207692
+[2026-09-28 20:39:06]    ▶ dense-r1c48-vllm-rep5（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 20:40:56]      success 100.0% · 1922 tok/s · P95 103.5s · tokens 207991
+[2026-09-28 20:41:06] ✅ Phase dense / r1c48 完成
+[2026-09-28 20:41:06] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 20:41:26] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-28 20:41:26] 🏁 全部完成
+[2026-09-28 20:41:39] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 20:41:40] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r2t600、每條件 5 次）
+[2026-09-28 20:41:41] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 20:41:41] ════ Phase kda / r2t600 ════
+[2026-09-28 20:41:41]    🚀 kda-sglang-r2t600 派送 Job 449524
+[2026-09-28 20:41:41]    🚀 kda-vllm-r2t600 派送 Job 449525
+[2026-09-28 20:47:42]    ✅ Job 449524 READY @ node-24:35000
+[2026-09-28 20:51:22]    ✅ Job 449525 READY @ node-31:38000
+[2026-09-28 20:51:22] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 20:51:42]    ▶ kda-r2t600-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 20:51:46]      success 100.0% · 1892 tok/s · P95 2.1s · tokens 4096
+[2026-09-28 20:51:46]    ▶ kda-r2t600-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 20:51:57]      success 100.0% · 398 tok/s · P95 8.4s · tokens 4096
+[2026-09-28 20:52:58]    ▶ kda-r2t600-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 20:56:37]      success 100.0% · 3363 tok/s · P95 214.1s · tokens 733278
+[2026-09-28 20:57:38]    ▶ kda-r2t600-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:02:44]      success 100.0% · 2401 tok/s · P95 299.2s · tokens 733222
+[2026-09-28 21:03:45]    ▶ kda-r2t600-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:08:48]      success 100.0% · 2425 tok/s · P95 297.6s · tokens 731820
+[2026-09-28 21:09:49]    ▶ kda-r2t600-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:13:38]      success 100.0% · 3223 tok/s · P95 224.4s · tokens 733125
+[2026-09-28 21:14:38]    ▶ kda-r2t600-sglang-rep3（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:18:29]      success 100.0% · 3208 tok/s · P95 225.7s · tokens 736169
+[2026-09-28 21:19:29]    ▶ kda-r2t600-vllm-rep3（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:24:33]      success 100.0% · 2421 tok/s · P95 297.7s · tokens 731443
+[2026-09-28 21:25:33]    ▶ kda-r2t600-vllm-rep4（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:30:37]      success 100.0% · 2427 tok/s · P95 298.0s · tokens 732386
+[2026-09-28 21:31:37]    ▶ kda-r2t600-sglang-rep4（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:35:24]      success 100.0% · 3267 tok/s · P95 221.8s · tokens 735070
+[2026-09-28 21:36:24]    ▶ kda-r2t600-sglang-rep5（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:40:16]      success 100.0% · 3195 tok/s · P95 226.6s · tokens 735776
+[2026-09-28 21:41:16]    ▶ kda-r2t600-vllm-rep5（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-28 21:46:18]      success 99.7% · 2429 tok/s · P95 296.2s · tokens 729091
+[2026-09-28 21:46:53] ✅ Phase kda / r2t600 完成
+[2026-09-28 21:46:54] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 21:47:13] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-28 21:47:13] 🏁 全部完成
+[2026-09-28 21:47:39] 🔎 cap 探測開始：SGLang dense R2 EAGLE，cap 64 80 96 112
+[2026-09-28 21:47:44]    🚀 cap 64 → Job 449633
+[2026-09-28 21:47:45]    🚀 cap 80 → Job 449634
+[2026-09-28 21:47:45]    🚀 cap 96 → Job 449635
+[2026-09-28 21:47:45]    🚀 cap 112 → Job 449636
+[2026-09-28 21:49:05]    ❌ cap 64：failed（生效 cap ?、KV ? tokens） — torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 340.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 232.94 MiB is free. Process 3790925 
+[2026-09-28 21:49:26]    ❌ cap 96：failed（生效 cap ?、KV ? tokens） — ValueError: Loaded weights leave no GPU memory for the KV cache under --mem-fraction-static=0.85. Raise --mem-fraction-static above 0.408 (minimum viable = 1 - 
+[2026-09-28 21:49:46]    ❌ cap 112：failed（生效 cap ?、KV ? tokens） — ValueError: Loaded weights leave no GPU memory for the KV cache under --mem-fraction-static=0.85. Raise --mem-fraction-static above 0.408 (minimum viable = 1 - 
+[2026-09-28 21:54:31]    ✅ cap 80：ready（生效 cap 80、KV 280554 tokens）
+[2026-09-28 21:54:31] 🔎 cap 探測完成：最大可行 cap = 80
+[2026-09-28 21:54:31] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-28 21:54:32] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 r2c80、每條件 5 次）
+[2026-09-28 21:54:33] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-28 21:54:33] ════ Phase dense / r2c80 ════
+[2026-09-28 21:54:33]    🚀 dense-sglang-r2c80 派送 Job 449649
+[2026-09-28 21:54:33]    🚀 dense-vllm-r2c80 派送 Job 449650
+[2026-09-28 22:00:45]    ✅ Job 449649 READY @ node-27:30000
+[2026-09-28 22:00:45]    ✅ Job 449650 READY @ node-27:36000
+[2026-09-28 22:00:45] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 22:01:05]    ▶ dense-r2c80-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 22:01:08]      success 100.0% · 1925 tok/s · P95 2.1s · tokens 4096
+[2026-09-28 22:01:09]    ▶ dense-r2c80-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-28 22:01:12]      success 100.0% · 1918 tok/s · P95 2.1s · tokens 4096
+[2026-09-28 22:02:13]    ▶ dense-r2c80-sglang-rep1（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:03:35]      success 100.0% · 2578 tok/s · P95 78.3s · tokens 208348
+[2026-09-28 22:04:35]    ▶ dense-r2c80-vllm-rep1（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:05:39]      success 100.0% · 3309 tok/s · P95 61.1s · tokens 207573
+[2026-09-28 22:06:40]    ▶ dense-r2c80-vllm-rep2（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:07:45]      success 100.0% · 3252 tok/s · P95 62.3s · tokens 207498
+[2026-09-28 22:08:45]    ▶ dense-r2c80-sglang-rep2（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:10:08]      success 100.0% · 2567 tok/s · P95 78.7s · tokens 207197
+[2026-09-28 22:11:08]    ▶ dense-r2c80-sglang-rep3（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:12:31]      success 100.0% · 2559 tok/s · P95 78.9s · tokens 207614
+[2026-09-28 22:13:31]    ▶ dense-r2c80-vllm-rep3（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:14:36]      success 100.0% · 3269 tok/s · P95 61.6s · tokens 207485
+[2026-09-28 22:15:36]    ▶ dense-r2c80-vllm-rep4（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:16:41]      success 100.0% · 3267 tok/s · P95 61.6s · tokens 206410
+[2026-09-28 22:17:41]    ▶ dense-r2c80-sglang-rep4（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:19:05]      success 100.0% · 2540 tok/s · P95 79.7s · tokens 208399
+[2026-09-28 22:20:05]    ▶ dense-r2c80-sglang-rep5（abrep-dense-sglang，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:21:28]      success 100.0% · 2554 tok/s · P95 79.2s · tokens 208084
+[2026-09-28 22:22:29]    ▶ dense-r2c80-vllm-rep5（abrep-dense-vllm，500 併發 × 500 筆 × max_tokens 500）
+[2026-09-28 22:23:34]      success 100.0% · 3262 tok/s · P95 61.8s · tokens 207645
+[2026-09-28 22:23:44] ✅ Phase dense / r2c80 完成
+[2026-09-28 22:23:44] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-28 22:24:07] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-28 22:24:07] 🏁 全部完成
+[2026-09-28 22:24:12] 🧊 冷／熱 TileLang 快取對照開始（kda vLLM R1，3 次）
+[2026-09-28 22:24:12]    🚀 rep 1：Job 449721（TileLang 快取 <cache>/abcold/20260928-153829/rep1/tilelang，空）
+[2026-09-28 22:34:53]    ✅ READY @ node-02
+[2026-09-28 22:35:13]    ▶ kda-r1-vllm-cold-rep1（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 22:38:25]      success 100.0% · 3839 tok/s · P95 185.6s
+[2026-09-28 22:39:26]    ▶ kda-r1-vllm-warm-rep1（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 22:42:06]      success 100.0% · 4622 tok/s · P95 152.7s
+[2026-09-28 22:42:06]    🧮 rep 1 TileLang 編譯次數：就緒時 72、冷 burst 後 72、熱 burst 後 72
+[2026-09-28 22:42:21]    🚀 rep 2：Job 449776（TileLang 快取 <cache>/abcold/20260928-153829/rep2/tilelang，空）
+[2026-09-28 22:52:42]    ✅ READY @ node-10
+[2026-09-28 22:53:02]    ▶ kda-r1-vllm-cold-rep2（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 22:56:04]      success 100.0% · 4048 tok/s · P95 175.4s
+[2026-09-28 22:57:04]    ▶ kda-r1-vllm-warm-rep2（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 23:00:37]      success 100.0% · 3468 tok/s · P95 206.0s
+[2026-09-28 23:00:37]    🧮 rep 2 TileLang 編譯次數：就緒時 72、冷 burst 後 72、熱 burst 後 72
+[2026-09-28 23:00:53]    🚀 rep 3：Job 449818（TileLang 快取 <cache>/abcold/20260928-153829/rep3/tilelang，空）
+[2026-09-28 23:06:54]    ✅ READY @ node-10
+[2026-09-28 23:07:15]    ▶ kda-r1-vllm-cold-rep3（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 23:10:12]      success 100.0% · 4170 tok/s · P95 170.6s
+[2026-09-28 23:11:13]    ▶ kda-r1-vllm-warm-rep3（1000 併發 × 1000 筆 × max_tokens 800，timeout 300）
+[2026-09-28 23:15:17]      success 100.0% · 2999 tok/s · P95 237.8s
+[2026-09-28 23:15:17]    🧮 rep 3 TileLang 編譯次數：就緒時 72、冷 burst 後 72、熱 burst 後 72
+[2026-09-28 23:15:53] 🧊 冷／熱快取對照完成（結果：cold_cache/jit_counts.tsv）
+[2026-09-29 03:24:15] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-29 03:24:16] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r1i1、每條件 2 次）
+[2026-09-29 03:24:16] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 03:24:16] ════ Phase kda / r1i1 ════
+[2026-09-29 03:24:17]    🚀 kda-sglang-r1i1 派送 Job 451075
+[2026-09-29 03:24:17]    🚀 kda-vllm-r1i1 派送 Job 451076
+[2026-09-29 03:38:18]    ❌ Job 451075 已結束且未就緒（見 <repo>/engines/_abrep-kda-sglang/logs/）
+[2026-09-29 03:38:58] ⚠️ 收到中斷訊號
+[2026-09-29 03:38:58] 🧹 中止時取消 Job 451075
+[2026-09-29 03:38:58] 🧹 中止時取消 Job 451076
+[2026-09-29 03:40:25] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-29 03:40:26] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r1i1、每條件 2 次）
+[2026-09-29 03:40:27] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 03:40:27] ════ Phase kda / r1i1 ════
+[2026-09-29 03:40:27]    🚀 kda-sglang-r1i1 派送 Job 451126
+[2026-09-29 03:40:27]    🚀 kda-vllm-r1i1 派送 Job 451127
+[2026-09-29 03:41:07] ⚠️ 收到中斷訊號
+[2026-09-29 03:41:07] 🧹 中止時取消 Job 451126
+[2026-09-29 03:41:07] 🧹 中止時取消 Job 451127
+[2026-09-29 03:41:21] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-29 03:41:21] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r1i1、每條件 2 次）
+[2026-09-29 03:41:22] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 03:41:22] ════ Phase kda / r1i1 ════
+[2026-09-29 03:41:22]    🚀 kda-sglang-r1i1 派送 Job 451129
+[2026-09-29 03:41:23]    🚀 kda-vllm-r1i1 派送 Job 451130
+[2026-09-29 03:47:23]    ✅ Job 451129 READY @ node-18:35000
+[2026-09-29 03:50:23]    ✅ Job 451130 READY @ node-19:38000
+[2026-09-29 03:50:23] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 03:50:46]    ▶ kda-r1i1-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 03:50:49]      success 100.0% · 1970 tok/s · P95 2.1s · tokens 4096
+[2026-09-29 03:50:49]    ▶ kda-r1i1-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 03:50:53]      success 100.0% · 1448 tok/s · P95 2.8s · tokens 4096
+[2026-09-29 03:51:54]    ▶ kda-r1i1-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 03:55:12]      success 100.0% · 3734 tok/s · P95 191.6s · tokens 734730
+[2026-09-29 03:56:12]    ▶ kda-r1i1-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 03:58:42]      success 100.0% · 4934 tok/s · P95 142.4s · tokens 731492
+[2026-09-29 03:59:43]    ▶ kda-r1i1-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:02:13]      success 100.0% · 4909 tok/s · P95 143.5s · tokens 733295
+[2026-09-29 04:03:14]    ▶ kda-r1i1-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:06:32]      success 100.0% · 3716 tok/s · P95 192.2s · tokens 732205
+[2026-09-29 04:06:48] ✅ Phase kda / r1i1 完成
+[2026-09-29 04:06:48] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 04:07:07] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-29 04:07:07] 🏁 全部完成
+[2026-09-29 04:07:07] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-29 04:07:08] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r1i2、每條件 2 次）
+[2026-09-29 04:07:09] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 04:07:09] ════ Phase kda / r1i2 ════
+[2026-09-29 04:07:09]    🚀 kda-sglang-r1i2 派送 Job 451173
+[2026-09-29 04:07:09]    🚀 kda-vllm-r1i2 派送 Job 451174
+[2026-09-29 04:13:30]    ✅ Job 451173 READY @ node-11:35000
+[2026-09-29 04:15:10]    ✅ Job 451174 READY @ node-31:38000
+[2026-09-29 04:15:10] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 04:15:30]    ▶ kda-r1i2-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 04:15:33]      success 100.0% · 2008 tok/s · P95 2.0s · tokens 4096
+[2026-09-29 04:15:34]    ▶ kda-r1i2-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 04:15:37]      success 100.0% · 1785 tok/s · P95 2.3s · tokens 4096
+[2026-09-29 04:16:38]    ▶ kda-r1i2-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:19:53]      success 100.0% · 3796 tok/s · P95 188.9s · tokens 737094
+[2026-09-29 04:20:54]    ▶ kda-r1i2-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:23:25]      success 100.0% · 4898 tok/s · P95 145.5s · tokens 733647
+[2026-09-29 04:24:25]    ▶ kda-r1i2-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:26:55]      success 99.9% · 4938 tok/s · P95 143.0s · tokens 730715
+[2026-09-29 04:27:55]    ▶ kda-r1i2-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:31:12]      success 100.0% · 3759 tok/s · P95 189.9s · tokens 735269
+[2026-09-29 04:31:48] ✅ Phase kda / r1i2 完成
+[2026-09-29 04:31:48] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 04:32:10] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-29 04:32:10] 🏁 全部完成
+[2026-09-29 04:32:10] ▶ run_ab_repeats.sh 開始（run 20260928-153829）
+[2026-09-29 04:32:11] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 r1i3、每條件 2 次）
+[2026-09-29 04:32:11] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 04:32:11] ════ Phase kda / r1i3 ════
+[2026-09-29 04:32:12]    🚀 kda-sglang-r1i3 派送 Job 451279
+[2026-09-29 04:32:12]    🚀 kda-vllm-r1i3 派送 Job 451280
+[2026-09-29 04:36:12]    ✅ Job 451279 READY @ node-11:35000
+[2026-09-29 04:37:12]    ✅ Job 451280 READY @ node-19:38000
+[2026-09-29 04:37:12] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 04:37:32]    ▶ kda-r1i3-sglang-warmup（abrep-kda-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 04:37:35]      success 100.0% · 2092 tok/s · P95 1.9s · tokens 4096
+[2026-09-29 04:37:36]    ▶ kda-r1i3-vllm-warmup（abrep-kda-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 04:37:39]      success 100.0% · 2040 tok/s · P95 2.0s · tokens 4096
+[2026-09-29 04:38:39]    ▶ kda-r1i3-sglang-rep1（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:41:55]      success 99.5% · 3765 tok/s · P95 188.2s · tokens 731264
+[2026-09-29 04:42:55]    ▶ kda-r1i3-vllm-rep1（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:45:26]      success 100.0% · 4904 tok/s · P95 143.3s · tokens 731746
+[2026-09-29 04:46:27]    ▶ kda-r1i3-vllm-rep2（abrep-kda-vllm，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:48:57]      success 100.0% · 4905 tok/s · P95 143.2s · tokens 733026
+[2026-09-29 04:49:58]    ▶ kda-r1i3-sglang-rep2（abrep-kda-sglang，1000 併發 × 1000 筆 × max_tokens 800）
+[2026-09-29 04:53:17]      success 100.0% · 3717 tok/s · P95 191.8s · tokens 733702
+[2026-09-29 04:53:27] ✅ Phase kda / r1i3 完成
+[2026-09-29 04:53:27] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 04:53:47] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260928-153829/summary.md
+[2026-09-29 04:53:47] 🏁 全部完成

@@ -1,0 +1,6 @@
+cap	job	node	result	effective_max_running_requests	max_total_num_tokens	available_gpu_mem	error
+64	449633	node-26	failed				torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 340.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 232.94 MiB is free. Process 3790925 
+96	449635	node-27	failed				ValueError: Loaded weights leave no GPU memory for the KV cache under --mem-fraction-static=0.85. Raise --mem-fraction-static above 0.408 (minimum viable = 1 - 
+112	449636	node-16	failed				ValueError: Loaded weights leave no GPU memory for the KV cache under --mem-fraction-static=0.85. Raise --mem-fraction-static above 0.408 (minimum viable = 1 - 
+80	449634	node-27	ready	80	280554	13.23	
+max_feasible_cap=80

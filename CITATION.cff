@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite this artifact version and the paper listed under references."
+title: "No Permanent Champion: research artifact"
+type: dataset
+version: "1.0"
+date-released: "2026-10-10"
+repository-code: "https://github.com/gemini960114/no-permanent-champion-research-artifact"
+license: [MIT, CC-BY-4.0]
+authors:
+  - family-names: Chuang
+    given-names: Chao-Chun
+    affiliation: "National Center for High-performance Computing (NCHC), National Institutes of Applied Research (NIAR), Taiwan"
+  - family-names: Lin
+    given-names: Po-Hsiang
+    affiliation: "Kaohsiung Veterans General Hospital, Kaohsiung, Taiwan"
+  - family-names: Huang
+    given-names: Liang-Hsun
+    affiliation: "Twinkle AI, Taiwan"
+references:
+  - type: article
+    title: "No Permanent Champion: A Deployment Study of SGLang and vLLM across Dense, Ultra-Sparse MoE, and KDA-Hybrid Architectures on H200 GPUs"
+    authors:
+      - family-names: Chuang
+        given-names: Chao-Chun
+      - family-names: Lin
+        given-names: Po-Hsiang
+      - family-names: Huang
+        given-names: Liang-Hsun
+    year: 2026
