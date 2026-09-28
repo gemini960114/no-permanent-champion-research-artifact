@@ -3,7 +3,7 @@ message: "If you use this artifact, please cite this artifact version and the pa
 title: "No Permanent Champion: research artifact"
 type: dataset
 version: "1.0"
-date-released: "2026-10-10"
+date-released: "2026-09-29"
 repository-code: "https://github.com/gemini960114/no-permanent-champion-research-artifact"
 license: [MIT, CC-BY-4.0]
 authors:
