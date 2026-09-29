@@ -19,7 +19,7 @@ Every item of the internal platform repository considered for this release, with
 | `.agents/skills/{model-onboarding,concurrency-troubleshooting,debug-journaling}/` | same | — | Evaluation skills described in §3 |
 | `skills-lock.json` | same | 1 | Content hashes of the third-party writing skills |
 | `analysis/reproduce_paper_numbers.py` | new for this release | 1 | Recomputes and checks the paper's headline numbers |
-| `README.md`, `MANIFEST.md`, `SHA256SUMS`, `CITATION.cff`, `LICENSE`, `LICENSE-DATA` | new / `LICENSE` | 6 | Documentation, integrity, citation, licenses (MIT for code, CC BY 4.0 for data and documentation) |
+| `README.md`, `MANIFEST.md`, `SHA256SUMS`, `CITATION.cff`, `.zenodo.json`, `.gitattributes`, `LICENSE`, `LICENSE-DATA` | new / `LICENSE` | 8 | Documentation, integrity, citation (`CITATION.cff` for GitHub, `.zenodo.json` for Zenodo), line-ending policy, licenses (MIT for code, CC BY 4.0 for data and documentation) |
 
 ## Excluded
 

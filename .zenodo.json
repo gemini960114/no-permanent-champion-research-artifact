@@ -1,0 +1,15 @@
+{
+  "title": "No Permanent Champion: research artifact",
+  "upload_type": "dataset",
+  "version": "1.0.1",
+  "description": "<p>Research artifact for the paper <em>No Permanent Champion: A Deployment Study of SGLang and vLLM across Dense, Ultra-Sparse MoE, and KDA-Hybrid Architectures on H200 GPUs</em> (Chuang, Lin, and Huang, 2026).</p><p>A curated snapshot of the experimental materials behind the paper: raw single-run and repeated measurements with per-request records, analysis and reproduction scripts, benchmark configurations and condition files, redacted execution logs, evaluation skills, and the manuscript. It supports result verification and re-analysis, not full deployment reproduction. Verify with <code>sha256sum -c SHA256SUMS</code> and <code>python3 analysis/reproduce_paper_numbers.py</code>; see README.md and MANIFEST.md.</p>",
+  "creators": [
+    {"name": "Chuang, Chao-Chun", "affiliation": "National Center for High-performance Computing (NCHC), National Institutes of Applied Research (NIAR), Taiwan"},
+    {"name": "Lin, Po-Hsiang", "affiliation": "Kaohsiung Veterans General Hospital, Kaohsiung, Taiwan"},
+    {"name": "Huang, Liang-Hsun", "affiliation": "Twinkle AI, Taiwan"}
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": ["LLM serving", "SGLang", "vLLM", "speculative decoding", "benchmarking", "H200", "mixture of experts", "reproducibility"],
+  "notes": "Code (including executable scripts) is licensed under MIT; data, logs, configurations, and documentation under CC BY 4.0. The manuscript in paper/ is not covered by either license. See README.md."
+}

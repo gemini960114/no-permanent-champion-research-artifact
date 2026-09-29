@@ -1,4 +1,4 @@
-# No Permanent Champion — research artifact (v1.0, submission)
+# No Permanent Champion — research artifact (v1.0.1, submission)
 
 Experimental materials for the paper **"No Permanent Champion: A Deployment Study of SGLang and vLLM across Dense, Ultra-Sparse MoE, and KDA-Hybrid Architectures on H200 GPUs"** (Chuang, Lin, and Huang, 2026).
 
@@ -97,6 +97,13 @@ Host names, network addresses, account and user identifiers, file-system paths, 
 
 `MANIFEST.md` lists every included and excluded item with its reason, and `SHA256SUMS` covers every file.
 
+## Versions
+
+| Version | Changes |
+| :--- | :--- |
+| v1.0.1 | Adds `.zenodo.json` so that Zenodo can archive the release (Zenodo could not load the `CITATION.cff` metadata of v1.0); version number updated in `CITATION.cff`, README, and the paper's Data Availability statement. No data, logs, scripts, or results changed |
+| v1.0 | Initial submission artifact |
+
 ## License
 
 | Path | License |
@@ -112,5 +119,5 @@ Where a path matches both rows, executable scripts are MIT and everything else i
 
 Please cite both the paper and the artifact version you used. `CITATION.cff` describes this artifact, so GitHub's "Cite this repository" produces the artifact citation; the paper is listed there under `references`.
 
-- **Artifact:** Chao-Chun Chuang, Po-Hsiang Lin, and Liang-Hsun Huang. *No Permanent Champion: research artifact*, version 1.0, 2026. https://github.com/gemini960114/no-permanent-champion-research-artifact (DOI to be added on archiving)
+- **Artifact:** Chao-Chun Chuang, Po-Hsiang Lin, and Liang-Hsun Huang. *No Permanent Champion: research artifact*, version 1.0.1, 2026. https://github.com/gemini960114/no-permanent-champion-research-artifact (DOI to be added on archiving)
 - **Paper:** Chao-Chun Chuang, Po-Hsiang Lin, and Liang-Hsun Huang. *No Permanent Champion: A Deployment Study of SGLang and vLLM across Dense, Ultra-Sparse MoE, and KDA-Hybrid Architectures on H200 GPUs*, 2026.

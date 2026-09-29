@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this artifact, please cite this artifact version and the paper listed under references."
 title: "No Permanent Champion: research artifact"
 type: dataset
-version: "1.0"
+version: "1.0.1"
 date-released: "2026-09-29"
 repository-code: "https://github.com/gemini960114/no-permanent-champion-research-artifact"
 license: [MIT, CC-BY-4.0]
