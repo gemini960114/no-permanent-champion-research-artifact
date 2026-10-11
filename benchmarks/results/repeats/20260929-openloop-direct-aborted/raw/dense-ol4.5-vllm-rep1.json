@@ -1,0 +1,32 @@
+{
+  "concurrency": 1350,
+  "total_requests": 1350,
+  "total_duration": 303.4921490470879,
+  "success_count": 0,
+  "failure_count": 1350,
+  "success_rate": 0.0,
+  "qps": 0.0,
+  "tps": 0.0,
+  "total_tokens": 0,
+  "avg_latency": 0.0,
+  "p50_latency": 0.0,
+  "p90_latency": 0.0,
+  "p95_latency": 0.0,
+  "p99_latency": 0.0,
+  "min_latency": 0.0,
+  "max_latency": 0.0,
+  "model_stats": {
+    "Qwen/Qwen3.8-27B-vLLM": {
+      "total": 1350,
+      "success": 0,
+      "failed": 1350,
+      "success_rate": 0.0,
+      "avg_latency": 0.0,
+      "p95_latency": 0.0,
+      "avg_tokens": 0.0
+    }
+  },
+  "arrival_rate": 4.5,
+  "seed": 1,
+  "offered_span_s": 303.4532083248394
+}

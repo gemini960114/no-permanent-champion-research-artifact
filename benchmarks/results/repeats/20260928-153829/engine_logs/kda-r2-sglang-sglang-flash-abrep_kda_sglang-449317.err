@@ -1,0 +1,38 @@
+/opt/sglang/lib/python3.12/site-packages/torch/cuda/__init__.py:188: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+Skipping automatic detection for serve backend 'diffusion': Unknown Error
+[2026-09-28 18:50:13] kill_process_tree called: parent_pid=1068265, include_parent=False, pid=1068265
+Traceback (most recent call last):
+  File "/sgl-workspace/sglang/python/sglang/srt/utils/common.py", line 945, in get_device
+    return current_platform.get_device(device_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/platforms/device_mixin.py", line 183, in get_device
+    raise NotImplementedError
+NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/sglang/bin/sglang", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/cli/main.py", line 40, in main
+    serve(args, extra_argv)
+  File "/sgl-workspace/sglang/python/sglang/cli/serve.py", line 205, in serve
+    registered.backend.run(request)
+  File "/sgl-workspace/sglang/python/sglang/cli/serve.py", line 99, in _run_llm
+    run_server(server_args)
+  File "/sgl-workspace/sglang/python/sglang/launch_server.py", line 29, in run_server
+    server_args.resolve_once()
+  File "/sgl-workspace/sglang/python/sglang/srt/server_args.py", line 281, in resolve_once
+    run_resolution_pipeline(self)
+  File "/sgl-workspace/sglang/python/sglang/srt/arg_groups/pipeline.py", line 145, in run_resolution_pipeline
+    run_hook(handle_missing_default_values, server_args)
+  File "/sgl-workspace/sglang/python/sglang/srt/arg_groups/resolution_hooks.py", line 198, in run_hook
+    step(server_args)
+  File "/sgl-workspace/sglang/python/sglang/srt/arg_groups/serving_hook.py", line 595, in handle_missing_default_values
+    device=get_device(),
+           ^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/utils/common.py", line 947, in get_device
+    raise RuntimeError(
+RuntimeError: No accelerator (CUDA, XPU, HPU, NPU, MUSA, MPS) or platform plugin is available.

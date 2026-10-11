@@ -1,0 +1,130 @@
+(APIServer pid=3023718) [transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   0% Completed | 0/62 [00:00<?, ?it/s]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   2% Completed | 1/62 [00:02<02:22,  2.34s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   3% Completed | 2/62 [00:05<02:32,  2.55s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   5% Completed | 3/62 [00:07<02:38,  2.69s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   6% Completed | 4/62 [00:10<02:32,  2.64s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:   8% Completed | 5/62 [00:13<02:34,  2.72s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  10% Completed | 6/62 [00:16<02:36,  2.80s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  11% Completed | 7/62 [00:19<02:34,  2.80s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  13% Completed | 8/62 [00:21<02:25,  2.70s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  15% Completed | 9/62 [00:24<02:23,  2.71s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  16% Completed | 10/62 [00:27<02:28,  2.86s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  18% Completed | 11/62 [00:30<02:32,  3.00s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  19% Completed | 12/62 [00:33<02:23,  2.86s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  21% Completed | 13/62 [00:36<02:20,  2.87s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  23% Completed | 14/62 [00:39<02:18,  2.88s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  24% Completed | 15/62 [00:41<02:06,  2.69s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  26% Completed | 16/62 [00:44<02:05,  2.73s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  27% Completed | 17/62 [00:47<02:06,  2.82s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  29% Completed | 18/62 [00:49<02:01,  2.76s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  31% Completed | 19/62 [00:52<02:01,  2.83s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  32% Completed | 20/62 [00:55<01:58,  2.82s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  34% Completed | 21/62 [00:57<01:49,  2.68s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  35% Completed | 22/62 [01:01<01:55,  2.89s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  37% Completed | 23/62 [01:03<01:49,  2.81s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  39% Completed | 24/62 [01:06<01:44,  2.74s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  40% Completed | 25/62 [01:09<01:46,  2.89s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  42% Completed | 26/62 [01:12<01:45,  2.93s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  44% Completed | 27/62 [01:15<01:38,  2.81s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  45% Completed | 28/62 [01:17<01:32,  2.74s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  47% Completed | 29/62 [01:20<01:29,  2.71s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  48% Completed | 30/62 [01:23<01:33,  2.91s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  50% Completed | 31/62 [01:26<01:23,  2.70s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  52% Completed | 32/62 [01:28<01:18,  2.60s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  53% Completed | 33/62 [01:31<01:17,  2.66s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  55% Completed | 34/62 [01:34<01:15,  2.71s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  56% Completed | 35/62 [01:37<01:16,  2.84s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  58% Completed | 36/62 [01:39<01:09,  2.69s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  60% Completed | 37/62 [01:42<01:09,  2.77s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  61% Completed | 38/62 [01:45<01:06,  2.78s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  63% Completed | 39/62 [01:48<01:06,  2.89s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  65% Completed | 40/62 [01:51<01:02,  2.83s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  66% Completed | 41/62 [01:54<00:59,  2.83s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  68% Completed | 42/62 [01:56<00:57,  2.85s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  69% Completed | 43/62 [01:59<00:54,  2.89s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  71% Completed | 44/62 [02:02<00:52,  2.94s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  73% Completed | 45/62 [02:05<00:49,  2.94s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  74% Completed | 46/62 [02:08<00:45,  2.85s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  76% Completed | 47/62 [02:10<00:38,  2.60s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  77% Completed | 48/62 [02:13<00:37,  2.70s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  79% Completed | 49/62 [02:16<00:35,  2.70s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  81% Completed | 50/62 [02:19<00:33,  2.79s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  82% Completed | 51/62 [02:21<00:29,  2.66s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  84% Completed | 52/62 [02:24<00:28,  2.81s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  85% Completed | 53/62 [02:27<00:25,  2.83s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  87% Completed | 54/62 [02:29<00:21,  2.64s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  89% Completed | 55/62 [02:32<00:17,  2.57s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  90% Completed | 56/62 [02:34<00:15,  2.55s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  92% Completed | 57/62 [02:37<00:12,  2.50s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  94% Completed | 58/62 [02:39<00:10,  2.59s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  95% Completed | 59/62 [02:42<00:08,  2.68s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  97% Completed | 60/62 [02:45<00:05,  2.65s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards:  98% Completed | 61/62 [02:48<00:02,  2.68s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards: 100% Completed | 62/62 [02:49<00:00,  2.27s/it]
+(Worker_TP0_EP0 pid=3025159) Loading safetensors checkpoint shards: 100% Completed | 62/62 [02:49<00:00,  2.73s/it]
+(Worker_TP0_EP0 pid=3025159) 
+(Worker_TP1_EP1 pid=3025552) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP2_EP2 pid=3025751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP1_EP1 pid=3025552)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP2_EP2 pid=3025751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP0_EP0 pid=3025159) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP0_EP0 pid=3025159)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP4_EP4 pid=3026090) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP4_EP4 pid=3026090)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP6_EP6 pid=3026751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP6_EP6 pid=3026751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP7_EP7 pid=3026905) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP7_EP7 pid=3026905)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP5_EP5 pid=3026556) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP5_EP5 pid=3026556)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP3_EP3 pid=3025939) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP3_EP3 pid=3025939)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/35 [00:00<?, ?it/s](Worker_TP2_EP2 pid=3025751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP2_EP2 pid=3025751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP1_EP1 pid=3025552) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP1_EP1 pid=3025552)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP4_EP4 pid=3026090) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP4_EP4 pid=3026090)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+/usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP0_EP0 pid=3025159)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP5_EP5 pid=3026556) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP5_EP5 pid=3026556)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP6_EP6 pid=3026751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP6_EP6 pid=3026751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP7_EP7 pid=3026905) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP7_EP7 pid=3026905)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP3_EP3 pid=3025939) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP3_EP3 pid=3025939)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (PIECEWISE):   3%|▎         | 1/35 [01:05<37:17, 65.82s/it]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 2/35 [01:06<15:08, 27.52s/it]Capturing CUDA graphs (PIECEWISE):   9%|▊         | 3/35 [01:06<08:03, 15.12s/it]Capturing CUDA graphs (PIECEWISE):  11%|█▏        | 4/35 [01:07<04:47,  9.29s/it]Capturing CUDA graphs (PIECEWISE):  14%|█▍        | 5/35 [01:07<03:01,  6.06s/it]Capturing CUDA graphs (PIECEWISE):  17%|█▋        | 6/35 [01:07<01:59,  4.12s/it]Capturing CUDA graphs (PIECEWISE):  20%|██        | 7/35 [01:08<01:20,  2.89s/it]Capturing CUDA graphs (PIECEWISE):  23%|██▎       | 8/35 [01:08<00:56,  2.08s/it]Capturing CUDA graphs (PIECEWISE):  26%|██▌       | 9/35 [01:09<00:40,  1.57s/it]Capturing CUDA graphs (PIECEWISE):  29%|██▊       | 10/35 [01:09<00:29,  1.19s/it]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 11/35 [01:09<00:22,  1.07it/s]Capturing CUDA graphs (PIECEWISE):  34%|███▍      | 12/35 [01:10<00:17,  1.33it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 13/35 [01:10<00:13,  1.58it/s]Capturing CUDA graphs (PIECEWISE):  40%|████      | 14/35 [01:10<00:11,  1.83it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 15/35 [01:11<00:09,  2.05it/s]Capturing CUDA graphs (PIECEWISE):  46%|████▌     | 16/35 [01:11<00:08,  2.24it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▊     | 17/35 [01:12<00:09,  1.81it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████▏    | 18/35 [01:12<00:08,  1.96it/s]Capturing CUDA graphs (PIECEWISE):  54%|█████▍    | 19/35 [01:12<00:06,  2.29it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 20/35 [01:13<00:05,  2.55it/s]Capturing CUDA graphs (PIECEWISE):  60%|██████    | 21/35 [01:13<00:05,  2.77it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 22/35 [01:13<00:04,  2.98it/s]Capturing CUDA graphs (PIECEWISE):  66%|██████▌   | 23/35 [01:14<00:03,  3.16it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 24/35 [01:14<00:03,  3.31it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████▏  | 25/35 [01:16<00:09,  1.05it/s]Capturing CUDA graphs (PIECEWISE):  74%|███████▍  | 26/35 [01:17<00:06,  1.33it/s]Capturing CUDA graphs (PIECEWISE):  77%|███████▋  | 27/35 [01:17<00:04,  1.63it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 28/35 [01:17<00:03,  1.96it/s]Capturing CUDA graphs (PIECEWISE):  83%|████████▎ | 29/35 [01:17<00:02,  2.27it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▌ | 30/35 [01:18<00:01,  2.56it/s]Capturing CUDA graphs (PIECEWISE):  89%|████████▊ | 31/35 [01:19<00:03,  1.33it/s]Capturing CUDA graphs (PIECEWISE):  91%|█████████▏| 32/35 [01:20<00:01,  1.65it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 33/35 [01:20<00:01,  1.60it/s]Capturing CUDA graphs (PIECEWISE):  97%|█████████▋| 34/35 [01:21<00:00,  1.70it/s](Worker_TP1_EP1 pid=3025552) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP2_EP2 pid=3025751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP1_EP1 pid=3025552)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP2_EP2 pid=3025751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+/usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP0_EP0 pid=3025159)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP4_EP4 pid=3026090) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP4_EP4 pid=3026090)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP5_EP5 pid=3026556) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP5_EP5 pid=3026556)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP6_EP6 pid=3026751) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP6_EP6 pid=3026751)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP7_EP7 pid=3026905) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP7_EP7 pid=3026905)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP3_EP3 pid=3025939) /usr/local/lib/python3.12/dist-packages/triton/language/core.py:2284: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+(Worker_TP3_EP3 pid=3025939)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (PIECEWISE): 100%|██████████| 35/35 [01:22<00:00,  1.26it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 35/35 [01:22<00:00,  2.36s/it]
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00<00:00,  2.44it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  2.98it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  2.88it/s]
+(Worker_TP0_EP0 pid=3025159) DeepGEMM warmup:   0%|          | 0/967 [00:00<?, ?it/s]DeepGEMM warmup:  78%|███████▊  | 755/967 [00:00<00:00, 7481.55it/s]DeepGEMM warmup: 100%|██████████| 967/967 [00:00<00:00, 8401.31it/s]
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   3%|▎         | 1/35 [00:00<00:14,  2.32it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 2/35 [00:00<00:12,  2.62it/s]Capturing CUDA graphs (PIECEWISE):   9%|▊         | 3/35 [00:01<00:11,  2.75it/s]Capturing CUDA graphs (PIECEWISE):  11%|█▏        | 4/35 [00:01<00:10,  2.82it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▍        | 5/35 [00:01<00:10,  2.86it/s]Capturing CUDA graphs (PIECEWISE):  17%|█▋        | 6/35 [00:02<00:10,  2.87it/s]Capturing CUDA graphs (PIECEWISE):  20%|██        | 7/35 [00:02<00:09,  2.90it/s]Capturing CUDA graphs (PIECEWISE):  23%|██▎       | 8/35 [00:02<00:09,  2.91it/s]Capturing CUDA graphs (PIECEWISE):  26%|██▌       | 9/35 [00:03<00:08,  2.93it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▊       | 10/35 [00:03<00:08,  2.91it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 11/35 [00:03<00:08,  2.92it/s]Capturing CUDA graphs (PIECEWISE):  34%|███▍      | 12/35 [00:04<00:07,  2.89it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 13/35 [00:04<00:07,  2.89it/s]Capturing CUDA graphs (PIECEWISE):  40%|████      | 14/35 [00:04<00:07,  2.90it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 15/35 [00:05<00:06,  2.91it/s]Capturing CUDA graphs (PIECEWISE):  46%|████▌     | 16/35 [00:05<00:06,  2.92it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▊     | 17/35 [00:05<00:05,  3.13it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████▏    | 18/35 [00:06<00:05,  3.30it/s]Capturing CUDA graphs (PIECEWISE):  54%|█████▍    | 19/35 [00:06<00:04,  3.43it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 20/35 [00:06<00:04,  3.53it/s]Capturing CUDA graphs (PIECEWISE):  60%|██████    | 21/35 [00:06<00:03,  3.61it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 22/35 [00:07<00:03,  3.64it/s]Capturing CUDA graphs (PIECEWISE):  66%|██████▌   | 23/35 [00:07<00:03,  3.65it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 24/35 [00:07<00:03,  3.66it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████▏  | 25/35 [00:07<00:02,  3.68it/s]Capturing CUDA graphs (PIECEWISE):  74%|███████▍  | 26/35 [00:08<00:02,  3.70it/s]Capturing CUDA graphs (PIECEWISE):  77%|███████▋  | 27/35 [00:08<00:02,  3.75it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 28/35 [00:08<00:01,  3.77it/s]Capturing CUDA graphs (PIECEWISE):  83%|████████▎ | 29/35 [00:09<00:01,  3.80it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▌ | 30/35 [00:09<00:01,  3.85it/s]Capturing CUDA graphs (PIECEWISE):  89%|████████▊ | 31/35 [00:09<00:01,  3.89it/s]Capturing CUDA graphs (PIECEWISE):  91%|█████████▏| 32/35 [00:09<00:00,  3.92it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 33/35 [00:10<00:00,  3.94it/s]Capturing CUDA graphs (PIECEWISE):  97%|█████████▋| 34/35 [00:10<00:00,  3.96it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 35/35 [00:10<00:00,  3.99it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 35/35 [00:10<00:00,  3.33it/s]
+(Worker_TP0_EP0 pid=3025159) Capturing CUDA graphs (FULL):   0%|          | 0/19 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):   5%|▌         | 1/19 [00:00<00:05,  3.57it/s]Capturing CUDA graphs (FULL):  11%|█         | 2/19 [00:00<00:04,  3.72it/s]Capturing CUDA graphs (FULL):  16%|█▌        | 3/19 [00:00<00:04,  3.75it/s]Capturing CUDA graphs (FULL):  21%|██        | 4/19 [00:01<00:03,  3.76it/s]Capturing CUDA graphs (FULL):  26%|██▋       | 5/19 [00:01<00:03,  3.77it/s]Capturing CUDA graphs (FULL):  32%|███▏      | 6/19 [00:01<00:03,  3.79it/s]Capturing CUDA graphs (FULL):  37%|███▋      | 7/19 [00:01<00:03,  3.77it/s]Capturing CUDA graphs (FULL):  42%|████▏     | 8/19 [00:02<00:02,  3.79it/s]Capturing CUDA graphs (FULL):  47%|████▋     | 9/19 [00:02<00:02,  3.82it/s]Capturing CUDA graphs (FULL):  53%|█████▎    | 10/19 [00:02<00:02,  3.85it/s]Capturing CUDA graphs (FULL):  58%|█████▊    | 11/19 [00:02<00:02,  3.86it/s]Capturing CUDA graphs (FULL):  63%|██████▎   | 12/19 [00:03<00:01,  3.88it/s]Capturing CUDA graphs (FULL):  68%|██████▊   | 13/19 [00:03<00:01,  3.86it/s]Capturing CUDA graphs (FULL):  74%|███████▎  | 14/19 [00:03<00:01,  3.88it/s]Capturing CUDA graphs (FULL):  79%|███████▉  | 15/19 [00:03<00:01,  3.90it/s]Capturing CUDA graphs (FULL):  84%|████████▍ | 16/19 [00:04<00:00,  3.93it/s]Capturing CUDA graphs (FULL):  89%|████████▉ | 17/19 [00:04<00:00,  3.95it/s]Capturing CUDA graphs (FULL):  95%|█████████▍| 18/19 [00:04<00:00,  3.96it/s]Capturing CUDA graphs (FULL): 100%|██████████| 19/19 [00:04<00:00,  4.00it/s]Capturing CUDA graphs (FULL): 100%|██████████| 19/19 [00:04<00:00,  3.86it/s]
+(APIServer pid=3023718) INFO:     Started server process [3023718]
+(APIServer pid=3023718) INFO:     Waiting for application startup.
+(APIServer pid=3023718) INFO:     Application startup complete.
+[2026-09-27T14:13:42.095] error: *** JOB 443806 ON node-25 CANCELLED AT 2026-09-27T14:13:42 DUE to SIGNAL Terminated ***
+(APIServer pid=3023718) INFO:     Shutting down
+(APIServer pid=3023718) INFO:     Waiting for application shutdown.
+(APIServer pid=3023718) INFO:     Application shutdown complete.
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 8 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 10 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

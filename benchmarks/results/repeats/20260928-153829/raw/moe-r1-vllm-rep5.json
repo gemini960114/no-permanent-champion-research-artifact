@@ -1,0 +1,29 @@
+{
+  "concurrency": 1000,
+  "total_requests": 1000,
+  "total_duration": 64.72480126199662,
+  "success_count": 1000,
+  "failure_count": 0,
+  "success_rate": 100.0,
+  "qps": 15.450028126809457,
+  "tps": 8048.352252042597,
+  "total_tokens": 520928,
+  "avg_latency": 37.62796702984194,
+  "p50_latency": 38.36327233850898,
+  "p90_latency": 60.45633495802758,
+  "p95_latency": 62.35955023599672,
+  "p99_latency": 64.03513305200613,
+  "min_latency": 5.343009703006828,
+  "max_latency": 64.50772562902421,
+  "model_stats": {
+    "abrep-moe-vllm": {
+      "total": 1000,
+      "success": 1000,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_latency": 37.62796702984194,
+      "p95_latency": 62.35955023599672,
+      "avg_tokens": 520.928
+    }
+  }
+}

@@ -1,0 +1,22 @@
+run_id=20260929-openloop
+started_at=2026-09-29T15:17:11+08:00
+login_node=login-01
+git_commit=f510aaf4db0159fa5b54259c0d50bf0af3d9fffd
+git_dirty_files=20
+reps=3 models=dense rounds=ol4.5,ol8 cooldown_s=60 client_timeout_s=600 warmup_n=64
+order_policy=odd rep: sglang→vllm; even rep: vllm→sglang
+harness_md5_local=58b5aecdf96cdf02aa286c0e7a257783
+harness_md5_vm=58b5aecdf96cdf02aa286c0e7a257783
+vm_python=3.12.3 httpx 0.28.1
+vm_ulimit_n=65535
+script_md5= conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+note=2026-09-29T15:19:22+08:00 script_md5 above is empty (md5sum resolved $0 after cd to the repo root); run_ab_repeats.sh used for this run: md5 601f1bf7956b03764f04c1d47db6f952 (git f510aaf); unchanged since the run started
+note=2026-09-29T15:31:50+08:00 dense/ol4.5 attempt 1 (jobs 454468/454469) aborted before any measurement: after the gateway restart the SGLang copy's alias abrep-dense-sglang was missing from the routing table (endpoint probe at 2.5 s timeout); run_ab_repeats.sh now retries the gateway restart up to 3 times
+resumed_at=2026-09-29T15:32:11+08:00 models=dense rounds=ol4.5,ol8 client_timeout_s=600 exclude=node-20,node-26,node-29,node-30 git_commit=a397410 script_md5=06b9bd79773f1f06e8e04a02f53f23d0 conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+note=2026-09-29T15:39:57+08:00 dense/ol4.5 attempt 2 (jobs 454489/454490) aborted before any measurement: vLLM job 454490 on node-32 failed with 'RuntimeError: No CUDA GPUs are available' while the SGLang job on the same node started; node-32 added to the exclusion list
+resumed_at=2026-09-29T15:39:59+08:00 models=dense rounds=ol4.5,ol8 client_timeout_s=600 exclude=node-20,node-26,node-29,node-30,node-32 git_commit=a397410 script_md5=06b9bd79773f1f06e8e04a02f53f23d0 conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+note=2026-09-29T15:46:48+08:00 dense/ol4.5 attempt 3 (jobs 454509/454510) aborted before any measurement: vLLM job 454510 on node-39 found only 6.04 of 139.8 GiB free on its GPU at startup (memory held outside this job); node-39 added to the exclusion list
+resumed_at=2026-09-29T15:47:41+08:00 models=dense rounds=ol4.5,ol8 client_timeout_s=600 exclude=node-20,node-26,node-29,node-30,node-32,node-39 git_commit=a397410 script_md5=3505b5f42a517a8cef80e95d4c2726b0 conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+resumed_at=2026-09-29T17:28:49+08:00 models=moe rounds=ol3,ol6 client_timeout_s=600 exclude=node-20,node-26,node-29,node-30,node-32,node-39 git_commit=2c6e784 script_md5=3505b5f42a517a8cef80e95d4c2726b0 conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+note=2026-09-29T19:00:47+08:00 run stopped at 18:48:42 by an interrupt signal during moe/ol6 (completed: dense ol4.5/ol8, moe ol3, moe ol6 sglang rep1 + vllm rep1-2). Not resumed: at high arrival rates the single-worker LiteLLM gateway saturated one CPU core (~2,300-2,400 tok/s streamed; measured 98-100% CPU during moe ol6), so this run is kept as evidence of the gateway streaming ceiling; framework comparison continues in 20260929-openloop-direct
+note=2026-09-30T00:36:46+08:00 correction to the 19:00:47 note: moe/ol6 sglang rep2 also completed (raw/moe-ol6-sglang-rep2.json written 18:48:06, 1800/1800, before the 18:48:42 interrupt), so moe/ol6 has two repetitions per framework; ol_summary.csv regenerated from raw/

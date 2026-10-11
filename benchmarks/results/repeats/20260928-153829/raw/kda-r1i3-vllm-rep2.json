@@ -1,0 +1,29 @@
+{
+  "concurrency": 1000,
+  "total_requests": 1000,
+  "total_duration": 149.44557174801594,
+  "success_count": 1000,
+  "failure_count": 0,
+  "success_rate": 100.0,
+  "qps": 6.691399338925385,
+  "tps": 4904.969691815119,
+  "total_tokens": 733026,
+  "avg_latency": 81.51812599794759,
+  "p50_latency": 81.90352233100566,
+  "p90_latency": 138.9612499679788,
+  "p95_latency": 143.22170449997066,
+  "p99_latency": 148.68502525001531,
+  "min_latency": 9.240413446037564,
+  "max_latency": 149.19372695003403,
+  "model_stats": {
+    "abrep-kda-vllm": {
+      "total": 1000,
+      "success": 1000,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_latency": 81.51812599794759,
+      "p95_latency": 143.22170449997066,
+      "avg_tokens": 733.026
+    }
+  }
+}

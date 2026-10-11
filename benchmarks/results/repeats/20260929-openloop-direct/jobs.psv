@@ -1,0 +1,12 @@
+dense,ol4.5|455088|abrep_dense_sglang|node-33|2026-09-29T19:24:48|2026-09-29T20:08:22|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+dense,ol4.5|455089|abrep_dense_vllm|node-04|2026-09-29T19:24:48|2026-09-29T20:08:22|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+dense,ol8|455439|abrep_dense_sglang|node-04|2026-09-29T20:08:36|2026-09-29T20:51:49|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+dense,ol8|455440|abrep_dense_vllm|node-33|2026-09-29T20:08:36|2026-09-29T20:51:49|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+moe,ol3|456188|abrep_moe_vllm|node-25|2026-09-29T21:00:34|2026-09-29T21:54:02|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+moe,ol3|456346|abrep_moe_sglang|node-42|2026-09-29T21:13:26|2026-09-29T21:54:02|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+moe,ol6|456443|abrep_moe_sglang|node-05|2026-09-29T21:54:14|2026-09-29T22:38:32|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+moe,ol6|456444|abrep_moe_vllm|node-06|2026-09-29T21:54:14|2026-09-29T22:38:32|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+kda,ol2.5|457250|abrep_kda_sglang|node-38|2026-09-29T22:39:15|2026-09-29T23:25:07|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+kda,ol2.5|457251|abrep_kda_vllm|node-22|2026-09-29T22:39:15|2026-09-29T23:25:07|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+kda,ol4.5|458024|abrep_kda_sglang|node-38|2026-09-29T23:26:14|2026-09-30T00:10:15|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+kda,ol4.5|458025|abrep_kda_vllm|node-22|2026-09-29T23:26:14|2026-09-30T00:10:15|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1

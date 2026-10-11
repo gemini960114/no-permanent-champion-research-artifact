@@ -1,0 +1,47 @@
+{
+  "concurrency": 1500,
+  "total_requests": 1500,
+  "total_duration": 54.520470061004744,
+  "success_count": 1018,
+  "failure_count": 482,
+  "success_rate": 67.86666666666666,
+  "qps": 18.671885969818792,
+  "tps": 8217.188874173544,
+  "total_tokens": 448005,
+  "avg_latency": 32.2096010844726,
+  "p50_latency": 34.04607795549964,
+  "p90_latency": 49.5783897920046,
+  "p95_latency": 50.27898221599753,
+  "p99_latency": 53.18610920899664,
+  "min_latency": 3.1612960679922253,
+  "max_latency": 54.329551611008355,
+  "model_stats": {
+    "glm5.3-flash": {
+      "total": 500,
+      "success": 340,
+      "failed": 160,
+      "success_rate": 68.0,
+      "avg_latency": 33.70949418425028,
+      "p95_latency": 49.584929514006944,
+      "avg_tokens": 489.9441176470588
+    },
+    "qwen3.8-flash": {
+      "total": 500,
+      "success": 339,
+      "failed": 161,
+      "success_rate": 67.80000000000001,
+      "avg_latency": 31.889778299180193,
+      "p95_latency": 50.11796619198867,
+      "avg_tokens": 415.17109144542775
+    },
+    "qwen3.8": {
+      "total": 500,
+      "success": 339,
+      "failed": 161,
+      "success_rate": 67.80000000000001,
+      "avg_latency": 31.02510630656616,
+      "p95_latency": 53.17347159801284,
+      "avg_tokens": 414.9882005899705
+    }
+  }
+}

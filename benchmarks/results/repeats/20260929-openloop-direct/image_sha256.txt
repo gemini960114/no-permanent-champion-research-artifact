@@ -1,0 +1,2 @@
+a7262b925bc26efffd0e02a4862f4bcd8ead30f357351d22eca331574bfb24f6  <containers>/sglang_0.5.20.sif
+84234b3afafb318a96387d4d3f38262a43147b8bce06ee64dcb28695e7532ef5  <containers>/vllm_0.29.1rc1.sif

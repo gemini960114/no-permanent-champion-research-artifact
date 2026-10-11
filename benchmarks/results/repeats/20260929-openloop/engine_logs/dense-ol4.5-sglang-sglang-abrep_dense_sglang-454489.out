@@ -1,0 +1,20 @@
+🔹 Singularity 執行檔: /usr/bin/singularity
+==================================================================
+🚀 SGLang Qwen3.8-27B 服務正在啟動
+==================================================================
+🔹 Job ID       : 454489
+🔹 執行節點     : node-32 (10.0.1.44)
+🔹 GPU 資源     : 1x H200 GPU (3)
+🔹 模型路徑     : <models>/Qwen3.8-27B
+🔹 容器映像檔   : <containers>/sglang_0.5.20.sif
+🔹 服務端點     : http://node-32:30000 (內網 IP: http://10.0.1.44:30000)
+🔹 Port Lock    : <repo>/runtime/port-locks/node-32-30000
+🔹 開始時間     : Tue Sep 29 03:33:11 PM CST 2026
+==================================================================
+🔒 SGLang API Key 鑑權保護已啟用
+[2026-09-29 15:39:26] INFO:     127.0.0.1:54576 - "GET /v1/models HTTP/1.1" 200 OK
+✅ [Job 454489] SGLang 健康自檢通過 (Port 30000 回應 HTTP 200 且 JSON 合法)，發布狀態正式為 ready
+[2026-09-29 15:39:27] INFO:     127.0.0.1:54590 - "GET /model_info HTTP/1.1" 200 OK
+[2026-09-29 15:39:29] INFO:     127.0.0.1:54594 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-09-29 15:39:29] INFO:     127.0.0.1:33984 - "POST /freeze_gc HTTP/1.1" 200 OK
+🛑 Inference 服務正在停止 (Job: 454489)...

@@ -1,0 +1,14 @@
+==================================================================
+🚀 SGLang Qwen3.8-Flash-Next 服務正在啟動
+==================================================================
+🔹 Job ID       : 456187
+🔹 執行節點     : node-40 (10.0.1.40)
+🔹 GPU 資源     : 4x H200 GPU (1,2,3,4)
+🔹 模型路徑     : <models>/Qwen3.8-Flash-Next-FP8
+🔹 容器映像檔   : <containers>/sglang_0.5.20.sif
+🔹 服務端點     : http://node-40:32000 (內網 IP: http://10.0.1.40:32000)
+🔹 Port Lock    : <repo>/runtime/port-locks/node-40-32000
+🔹 開始時間     : Tue Sep 29 09:00:35 PM CST 2026
+==================================================================
+🔹 執行啟動指令: <envstack>/apps/singularity/4.3.7/bin/singularity exec --nv --bind /work:/work <containers>/sglang_0.5.20.sif /opt/sglang/bin/sglang serve --trust-remote-code --model-path <models>/Qwen3.8-Flash-Next-FP8 --tp 4 --ep 4 --mem-fraction-static 0.85 --chunked-prefill-size 8192 --linear-attn-prefill-backend flashinfer --linear-attn-decode-backend flashinfer --linear-attn-verify-backend triton --mamba-ssm-dtype bfloat16 --reasoning-parser auto --host 0.0.0.0 --port 32000 --no-ple-offload-embedding --api-key <masked>
+🛑 sglang_flash 服務正在停止 (Job: 456187)...

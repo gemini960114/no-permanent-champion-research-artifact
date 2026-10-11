@@ -1,0 +1,34 @@
+run_id=20260928-153829
+started_at=2026-09-28T15:38:31+08:00
+login_node=login-01
+git_commit=b107ba9a4903c0468328992a5638aceb611124f7
+git_dirty_files=7
+reps=5 models=dense,moe,kda rounds=r1,r2 cooldown_s=60 client_timeout_s=300 warmup_n=64
+order_policy=odd rep: sglang→vllm; even rep: vllm→sglang
+harness_md5_local=40060a20342764446c9bbe6ef2609263
+harness_md5_vm=40060a20342764446c9bbe6ef2609263
+vm_python=3.12.3 httpx 0.28.1
+vm_ulimit_n=65535
+note=2026-09-28T16:08:47+08:00 中途修正：(1) burst 前置檢查改 /v1/models＋--skip-check＋無結果重試一次（dense-r1-vllm-rep3 因 harness /health 逾時缺漏）；(2) conditions/dense-sglang-r2.env 更正為原始 job 442750 實際參數（cap 48、mamba 240），原 cap 128 版本啟動失敗（job 448918）
+resumed_at=2026-09-28T16:08:59+08:00 git_commit=b107ba9 script_md5=6563fecab18bc99c137dd6c4932be2d5 conditions_md5=8823a91b1b9b0f58d9323d20ec382071
+note=2026-09-28T19:00:07+08:00 kda-r2 首次啟動失敗：SGLang job 449317 於 node-20 報 'No accelerator available'（節點 GPU 不可用，31 秒退出）；續跑以 SBATCH_EXCLUDE=node-20 排除該節點
+resumed_at=2026-09-28T19:00:09+08:00 git_commit=b107ba9 script_md5=6563fecab18bc99c137dd6c4932be2d5 conditions_md5=77378b0eb2ba4ab7e1c2ea472d1a6dc9
+note=2026-09-28T19:01:56+08:00 SBATCH_EXCLUDE 不受本叢集 Slurm 25.11.4 支援（job 449341 仍落在 node-20 並 NVMLError），改以 --exclude 寫入 #SBATCH --exclude；已中止該次續跑
+resumed_at=2026-09-28T19:01:57+08:00 git_commit=b107ba9 script_md5=1be93522a3fb7f13d598e488651d61f2 conditions_md5=77378b0eb2ba4ab7e1c2ea472d1a6dc9
+note=2026-09-28T19:53:11+08:00 新增 r2t600（kda R2 同參數、client 上限 600 秒），於 r1c48 後接跑；目的：取得未截尾吞吐與完成率
+resumed_at=2026-09-28T20:06:48+08:00 models=dense rounds=r1c48 client_timeout_s=300 exclude=node-20 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=3ab93fad0a84a7d05e8e63a1cd35e978
+note=2026-09-28T20:20:11+08:00 新增 cap 掃描：r2t600 後以 probe_caps.sh 探測 SGLang dense R2 可行 cap（64/80/96/112），再以最大可行值跑 r2c<cap> 配對 5 次
+note=2026-09-28T20:25:51+08:00 新增冷／熱 TileLang 快取對照（cold_cache.sh，kda vLLM R1 × 3 次；唯一變因為 TileLang 快取目錄），於 cap 掃描後接跑
+resumed_at=2026-09-28T20:41:40+08:00 models=kda rounds=r2t600 client_timeout_s=600 exclude=node-20 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=3ab93fad0a84a7d05e8e63a1cd35e978
+note=2026-09-28T21:51:24+08:00 cap 探測：cap 64（job 449633，node-26）OOM 無效——啟動時 GPU 0 僅 5.88 GB 可用、PID 3790925 佔 133 GB（非本研究 job）；cap 96、112 為有效之 KV cache 不足；cap 64 待排除 node-26 重測
+resumed_at=2026-09-28T21:54:33+08:00 models=dense rounds=r2c80 client_timeout_s=300 exclude=node-20 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=4a253f619bcfb2053bf0f231a4b7040b
+note=2026-09-28T23:16:45+08:00 冷／熱快取對照完成：runtime JIT 只在無 warm-up 首 burst（3/3），吞吐代價未能確認（冷÷熱 −16.9%/+16.7%/+39.0%）；node-10 熱 burst 出現無 JIT 停頓
+note=2026-09-29T03:24:15+08:00 新增 kda R1 instance 間變異量測：round r1i1–r1i3，每 round 全新 instance、2 次交錯、warm-up；排除 node-20、node-26（不排除 node-10）
+resumed_at=2026-09-29T03:24:16+08:00 models=kda rounds=r1i1 client_timeout_s=300 exclude=node-20,node-26 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=58536ee8c1650ea8fa6ec41b8eab8dec
+note=2026-09-29T03:40:25+08:00 r1i1 同時 vLLM job 451076 於 node-30 NCCL 初始化失敗（03:27–03:38，與 node-29 同時）；兩節點皆無 /usr/bin/singularity、改用 <envstack> 4.3.7；推測該類節點 8 卡 NCCL 不可用（單卡 node-28 正常）；排除 node-29、node-30 重跑
+resumed_at=2026-09-29T03:40:27+08:00 models=kda rounds=r1i1 client_timeout_s=300 exclude=node-20,node-26 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=58536ee8c1650ea8fa6ec41b8eab8dec
+note=2026-09-29T03:41:21+08:00 更正：前一次重跑（job 451126/451127）排除清單誤為 node-20,node-26（先前加入 node-29 的 sed 未執行），已於 40 秒內中止；本次正確排除 node-20,node-26,node-29,node-30
+resumed_at=2026-09-29T03:41:22+08:00 models=kda rounds=r1i1 client_timeout_s=300 exclude=node-20,node-26,node-29,node-30 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=58536ee8c1650ea8fa6ec41b8eab8dec
+resumed_at=2026-09-29T04:07:08+08:00 models=kda rounds=r1i2 client_timeout_s=300 exclude=node-20,node-26,node-29,node-30 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=58536ee8c1650ea8fa6ec41b8eab8dec
+resumed_at=2026-09-29T04:32:11+08:00 models=kda rounds=r1i3 client_timeout_s=300 exclude=node-20,node-26,node-29,node-30 git_commit=b107ba9 script_md5=fd6921f36fa30b13816fc33e2442e529 conditions_md5=58536ee8c1650ea8fa6ec41b8eab8dec
+note=2026-09-29T04:54:13+08:00 kda R1 instance 間變異完成（r1i1–r1i3）：跨 4 對 instance SGLang 3,733 ± 38、vLLM 4,866 ± 98、SGLang/vLLM 0.767 ± 0.010；有 warm-up 時 instance 間 CV 1–2%

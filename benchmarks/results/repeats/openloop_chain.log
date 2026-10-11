@@ -1,0 +1,164 @@
+[2026-09-29 15:17:10] ▶ run_ab_repeats.sh 開始（run 20260929-openloop）
+[2026-09-29 15:17:11] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 15:17:12] 🔏 背景計算 SIF sha256 → image_sha256.txt
+md5sum: <repo>/run_ab_repeats.sh: No such file or directory
+[2026-09-29 15:17:14] ════ Phase dense / ol4.5 ════
+[2026-09-29 15:17:14]    🚀 dense-sglang-ol4.5 派送 Job 454468
+[2026-09-29 15:17:14]    🚀 dense-vllm-ol4.5 派送 Job 454469
+[2026-09-29 15:23:15]    ✅ Job 454468 READY @ node-37:30000
+[2026-09-29 15:23:15]    ✅ Job 454469 READY @ node-37:36000
+[2026-09-29 15:23:15] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 15:23:36]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 15:23:36]    ❌ Gateway 未列出 abrep 別名
+[2026-09-29 15:23:42] ❌ Phase dense/ol4.5 失敗（引擎未就緒或路由缺失）；可用 --run-id 20260929-openloop 續跑
+chain_exit=1 at 2026-09-29T15:23:42+08:00
+[2026-09-29 15:32:10] ▶ run_ab_repeats.sh 開始（run 20260929-openloop）
+[2026-09-29 15:32:11] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 15:32:11] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 15:32:12] ════ Phase dense / ol4.5 ════
+[2026-09-29 15:32:12]    🚀 dense-sglang-ol4.5 派送 Job 454489
+[2026-09-29 15:32:12]    🚀 dense-vllm-ol4.5 派送 Job 454490
+[2026-09-29 15:39:33]    ✅ Job 454489 READY @ node-32:30000
+[2026-09-29 15:39:33]    ❌ Job 454490 已結束且未就緒（見 <repo>/engines/_abrep-dense-vllm/logs/）
+[2026-09-29 15:39:43] ❌ Phase dense/ol4.5 失敗（引擎未就緒或路由缺失）；可用 --run-id 20260929-openloop 續跑
+chain_exit=1 at 2026-09-29T15:39:43+08:00
+[2026-09-29 15:39:57] ▶ run_ab_repeats.sh 開始（run 20260929-openloop）
+[2026-09-29 15:39:58] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 15:39:59] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 15:39:59] ════ Phase dense / ol4.5 ════
+[2026-09-29 15:39:59]    🚀 dense-sglang-ol4.5 派送 Job 454509
+[2026-09-29 15:39:59]    🚀 dense-vllm-ol4.5 派送 Job 454510
+[2026-09-29 15:46:00]    ✅ Job 454509 READY @ node-01:30001
+[2026-09-29 15:46:00]    ❌ Job 454510 已結束且未就緒（見 <repo>/engines/_abrep-dense-vllm/logs/）
+[2026-09-29 15:46:10] ❌ Phase dense/ol4.5 失敗（引擎未就緒或路由缺失）；可用 --run-id 20260929-openloop 續跑
+chain_exit=1 at 2026-09-29T15:46:10+08:00
+[2026-09-29 15:47:40] ▶ run_ab_repeats.sh 開始（run 20260929-openloop）
+[2026-09-29 15:47:40] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 15:47:41] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 15:47:41] ════ Phase dense / ol4.5 ════
+[2026-09-29 15:47:41]    🚀 dense-sglang-ol4.5 派送 Job 454541
+[2026-09-29 15:47:42]    🚀 dense-vllm-ol4.5 派送 Job 454542
+[2026-09-29 15:54:02]    ✅ Job 454541 READY @ node-35:30000
+[2026-09-29 15:54:02]    ✅ Job 454542 READY @ node-41:36000
+[2026-09-29 15:54:02] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 15:54:24]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 15:54:25]    ▶ dense-ol4.5-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 15:54:28]      success 100.0% · 1824 tok/s · P95 2.2s · tokens 4096
+[2026-09-29 15:54:29]    ▶ dense-ol4.5-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 15:54:32]      success 100.0% · 1724 tok/s · P95 2.3s · tokens 4096
+[2026-09-29 15:55:33]    ▶ dense-ol4.5-sglang-rep1（abrep-dense-sglang，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:00:50]      success 100.0% · 1780 tok/s · P95 13.1s · tokens 561879
+[2026-09-29 16:01:51]    ▶ dense-ol4.5-vllm-rep1（abrep-dense-vllm，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:07:08]      success 100.0% · 1771 tok/s · P95 13.6s · tokens 559018
+[2026-09-29 16:08:08]    ▶ dense-ol4.5-vllm-rep2（abrep-dense-vllm，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:13:22]      success 100.0% · 1798 tok/s · P95 13.4s · tokens 561684
+[2026-09-29 16:14:23]    ▶ dense-ol4.5-sglang-rep2（abrep-dense-sglang，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:19:36]      success 100.0% · 1789 tok/s · P95 12.6s · tokens 558060
+[2026-09-29 16:20:37]    ▶ dense-ol4.5-sglang-rep3（abrep-dense-sglang，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:25:44]      success 100.0% · 1831 tok/s · P95 13.3s · tokens 559667
+[2026-09-29 16:26:45]    ▶ dense-ol4.5-vllm-rep3（abrep-dense-vllm，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 16:31:53]      success 100.0% · 1830 tok/s · P95 13.8s · tokens 561440
+[2026-09-29 16:32:08] ✅ Phase dense / ol4.5 完成
+[2026-09-29 16:32:08] ════ Phase dense / ol8 ════
+[2026-09-29 16:32:09]    🚀 dense-sglang-ol8 派送 Job 454696
+[2026-09-29 16:32:09]    🚀 dense-vllm-ol8 派送 Job 454697
+[2026-09-29 16:38:23]    ✅ Job 454696 READY @ node-24:30000
+[2026-09-29 16:38:23]    ✅ Job 454697 READY @ node-24:36000
+[2026-09-29 16:38:23] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 16:38:43]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 16:38:44]    ▶ dense-ol8-sglang-warmup（abrep-dense-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 16:38:48]      success 100.0% · 1810 tok/s · P95 2.2s · tokens 4096
+[2026-09-29 16:38:48]    ▶ dense-ol8-vllm-warmup（abrep-dense-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 16:38:51]      success 100.0% · 1741 tok/s · P95 2.3s · tokens 4096
+[2026-09-29 16:39:52]    ▶ dense-ol8-sglang-rep1（abrep-dense-sglang，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 16:47:14]      success 100.0% · 2267 tok/s · P95 135.8s · tokens 998172
+[2026-09-29 16:48:14]    ▶ dense-ol8-vllm-rep1（abrep-dense-vllm，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 16:55:35]      success 100.0% · 2271 tok/s · P95 139.7s · tokens 996933
+[2026-09-29 16:56:36]    ▶ dense-ol8-vllm-rep2（abrep-dense-vllm，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 17:03:45]      success 100.0% · 2330 tok/s · P95 126.3s · tokens 997147
+[2026-09-29 17:04:46]    ▶ dense-ol8-sglang-rep2（abrep-dense-sglang，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 17:11:50]      success 100.0% · 2351 tok/s · P95 123.8s · tokens 992897
+[2026-09-29 17:12:50]    ▶ dense-ol8-sglang-rep3（abrep-dense-sglang，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 17:20:04]      success 100.0% · 2312 tok/s · P95 130.4s · tokens 999977
+[2026-09-29 17:21:05]    ▶ dense-ol8-vllm-rep3（abrep-dense-vllm，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 17:28:17]      success 100.0% · 2315 tok/s · P95 124.6s · tokens 997190
+[2026-09-29 17:28:28] ✅ Phase dense / ol8 完成
+[2026-09-29 17:28:28] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 17:28:48]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+# A/B 重複量測彙整（20260929-openloop）
+
+數值為 mean ± SD（樣本標準差）；† = 至少一個 rep 成功率 < 100%（截尾量測）。
+
+## 各條件吞吐（tok/s）
+
+| 模型 | 回合 | 框架 | n | 吞吐 mean ± SD | CV | 範圍 | P95 (s) | 成功率 (min) | 原始單次 |
+| :--- | :--- | :--- | ---: | ---: | ---: | :--- | ---: | ---: | ---: |
+
+## 框架差距（SGLang ÷ vLLM）
+
+| 模型 | 回合 | 平均值比 | 逐 rep 配對比 mean ± SD | 領先方 |
+| :--- | :--- | ---: | ---: | :--- |
+
+## 投機解碼效果（R2 ÷ R1，同框架）
+
+| 模型 | 框架 | R2/R1 | 變化 |
+| :--- | :--- | ---: | ---: |
+
+## 順序效應（交錯設計驗證）
+
+奇數 rep SGLang 先、偶數 rep vLLM 先；差異＝後跑平均 ÷ 先跑平均 − 1。
+
+| 模型 | 回合 | 框架 | 先跑 (n) | 後跑 (n) | 差異 |
+| :--- | :--- | :--- | ---: | ---: | ---: |
+[2026-09-29 17:28:48] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260929-openloop/summary.md
+[2026-09-29 17:28:48] 🏁 全部完成
+[2026-09-29 17:28:48] ▶ run_ab_repeats.sh 開始（run 20260929-openloop）
+[2026-09-29 17:28:49] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 moe、回合 ol3,ol6、每條件 3 次）
+[2026-09-29 17:28:49] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 17:28:49] ════ Phase moe / ol3 ════
+[2026-09-29 17:28:49]    🚀 moe-sglang-ol3 派送 Job 454866
+[2026-09-29 17:28:50]    🚀 moe-vllm-ol3 派送 Job 454867
+[2026-09-29 17:32:50]    ✅ Job 454866 READY @ node-34:32000
+[2026-09-29 17:34:10]    ✅ Job 454867 READY @ node-24:37000
+[2026-09-29 17:34:10] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 17:34:20]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 17:34:21]    ▶ moe-ol3-sglang-warmup（abrep-moe-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 17:34:24]      success 100.0% · 2144 tok/s · P95 1.9s · tokens 4096
+[2026-09-29 17:34:25]    ▶ moe-ol3-vllm-warmup（abrep-moe-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 17:34:28]      success 100.0% · 2470 tok/s · P95 1.6s · tokens 4096
+[2026-09-29 17:35:28]    ▶ moe-ol3-sglang-rep1（abrep-moe-sglang，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 17:40:44]      success 100.0% · 1496 tok/s · P95 15.8s · tokens 469706
+[2026-09-29 17:41:44]    ▶ moe-ol3-vllm-rep1（abrep-moe-vllm，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 17:46:58]      success 100.0% · 1505 tok/s · P95 8.7s · tokens 470737
+[2026-09-29 17:47:59]    ▶ moe-ol3-vllm-rep2（abrep-moe-vllm，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 17:53:12]      success 100.0% · 1518 tok/s · P95 8.8s · tokens 472223
+[2026-09-29 17:54:12]    ▶ moe-ol3-sglang-rep2（abrep-moe-sglang，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 17:59:26]      success 100.0% · 1497 tok/s · P95 15.0s · tokens 467086
+[2026-09-29 18:00:26]    ▶ moe-ol3-sglang-rep3（abrep-moe-sglang，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 18:05:26]      success 100.0% · 1587 tok/s · P95 15.8s · tokens 473158
+[2026-09-29 18:06:27]    ▶ moe-ol3-vllm-rep3（abrep-moe-vllm，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 18:11:25]      success 100.0% · 1608 tok/s · P95 9.2s · tokens 476741
+[2026-09-29 18:11:35] ✅ Phase moe / ol3 完成
+[2026-09-29 18:11:35] ════ Phase moe / ol6 ════
+[2026-09-29 18:11:35]    🚀 moe-sglang-ol6 派送 Job 454947
+[2026-09-29 18:11:35]    🚀 moe-vllm-ol6 派送 Job 454948
+[2026-09-29 18:15:36]    ✅ Job 454947 READY @ node-06:32000
+[2026-09-29 18:17:16]    ✅ Job 454948 READY @ node-08:37000
+[2026-09-29 18:17:16] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 18:17:36]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 18:17:37]    ▶ moe-ol6-sglang-warmup（abrep-moe-sglang，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 18:17:40]      success 100.0% · 2136 tok/s · P95 1.9s · tokens 4096
+[2026-09-29 18:17:41]    ▶ moe-ol6-vllm-warmup（abrep-moe-vllm，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 18:17:44]      success 100.0% · 2454 tok/s · P95 1.6s · tokens 4096
+[2026-09-29 18:18:44]    ▶ moe-ol6-sglang-rep1（abrep-moe-sglang，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 18:25:22]      success 100.0% · 2368 tok/s · P95 108.7s · tokens 938676
+[2026-09-29 18:26:23]    ▶ moe-ol6-vllm-rep1（abrep-moe-vllm，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 18:32:54]      success 100.0% · 2423 tok/s · P95 94.8s · tokens 944078
+[2026-09-29 18:33:55]    ▶ moe-ol6-vllm-rep2（abrep-moe-vllm，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 18:40:27]      success 100.0% · 2407 tok/s · P95 92.9s · tokens 940075
+[2026-09-29 18:41:27]    ▶ moe-ol6-sglang-rep2（abrep-moe-sglang，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 18:48:06]      success 100.0% · 2366 tok/s · P95 112.7s · tokens 939779
+Terminated
+[2026-09-29 18:48:42] ⚠️ 收到中斷訊號
+[2026-09-29 18:48:42] 🧹 中止時取消 Job 454947
+[2026-09-29 18:48:42] 🧹 中止時取消 Job 454948

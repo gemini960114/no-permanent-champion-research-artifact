@@ -1,0 +1,29 @@
+{
+  "concurrency": 64,
+  "total_requests": 64,
+  "total_duration": 1.7418910779524595,
+  "success_count": 64,
+  "failure_count": 0,
+  "success_rate": 100.0,
+  "qps": 36.741677370108626,
+  "tps": 2351.467351686952,
+  "total_tokens": 4096,
+  "avg_latency": 1.6086115568359673,
+  "p50_latency": 1.6053964416496456,
+  "p90_latency": 1.6206998070701957,
+  "p95_latency": 1.6226525828242302,
+  "p99_latency": 1.7085756710730493,
+  "min_latency": 1.5933943290729076,
+  "max_latency": 1.7085756710730493,
+  "model_stats": {
+    "<models>/GLM-5.3-Flash": {
+      "total": 64,
+      "success": 64,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_latency": 1.6086115568359673,
+      "p95_latency": 1.6226525828242302,
+      "avg_tokens": 64.0
+    }
+  }
+}

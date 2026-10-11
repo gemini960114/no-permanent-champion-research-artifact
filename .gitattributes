@@ -1,0 +1,2 @@
+# Keep every file byte-identical on checkout (no line-ending conversion), so SHA256SUMS verifies on all platforms.
+* -text

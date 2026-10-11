@@ -1,0 +1,15 @@
+run_id=20260929-openloop-direct
+started_at=2026-09-29T19:24:44+08:00
+login_node=login-01
+git_commit=4f4cc4e3b7910780fc36072533f22200763df30b
+git_dirty_files=4
+reps=3 models=dense rounds=ol4.5,ol8 direct=true cooldown_s=60 client_timeout_s=600 warmup_n=64
+order_policy=odd rep: sglang→vllm; even rep: vllm→sglang
+harness_md5_local=58b5aecdf96cdf02aa286c0e7a257783
+harness_md5_vm=58b5aecdf96cdf02aa286c0e7a257783
+vm_python=3.12.3 httpx 0.28.1
+vm_ulimit_n=65535
+script_md5=869a269d459bd30dc64249ec28fe96ac conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+resumed_at=2026-09-29T20:52:26+08:00 models=moe rounds=ol3,ol6 direct=true client_timeout_s=600 exclude=node-20,node-26,node-29,node-30,node-32,node-39 git_commit=3aa2d7a script_md5=869a269d459bd30dc64249ec28fe96ac conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb
+note=2026-09-29T21:13:25+08:00 moe-sglang-ol3 job 456187 failed to become ready on node-40; node excluded (now: node-20,node-26,node-29,node-30,node-32,node-39,node-40) and engine resubmitted
+resumed_at=2026-09-29T22:39:06+08:00 models=kda rounds=ol2.5,ol4.5 direct=true client_timeout_s=600 exclude=node-20,node-26,node-29,node-30,node-32,node-39 git_commit=3aa2d7a script_md5=869a269d459bd30dc64249ec28fe96ac conditions_md5=01a16c6e8eb22b9e0ded58637f4accbb

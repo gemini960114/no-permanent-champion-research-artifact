@@ -1,0 +1,168 @@
+[2026-09-29 19:24:43] ▶ run_ab_repeats.sh 開始（run 20260929-openloop-direct）
+[2026-09-29 19:24:44] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 19:24:45] 🔏 背景計算 SIF sha256 → image_sha256.txt
+[2026-09-29 19:24:47] ════ Phase dense / ol4.5 ════
+[2026-09-29 19:24:47]    🚀 dense-sglang-ol4.5 派送 Job 455088
+[2026-09-29 19:24:47]    🚀 dense-vllm-ol4.5 派送 Job 455089
+[2026-09-29 19:31:08]    ✅ Job 455088 READY @ node-33:30000
+[2026-09-29 19:31:08]    ✅ Job 455089 READY @ node-04:36000
+[2026-09-29 19:31:08]    🔗 直連 abrep-dense-sglang → http://node-33:30000/v1（served model <models>/Qwen3.8-27B）
+[2026-09-29 19:31:08]    🔗 直連 abrep-dense-vllm → http://node-04:36000/v1（served model <models>/Qwen3.8-27B）
+[2026-09-29 19:31:08]    ▶ dense-ol4.5-sglang-warmup（直連 http://node-33:30000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 19:31:11]      success 100.0% · 2077 tok/s · P95 1.9s · tokens 4096 · client_time real=3.299 user=0.297 sys=0.085
+[2026-09-29 19:31:11]    ▶ dense-ol4.5-vllm-warmup（直連 http://node-04:36000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 19:31:14]      success 100.0% · 2019 tok/s · P95 2.0s · tokens 4096 · client_time real=2.384 user=0.284 sys=0.075
+[2026-09-29 19:32:14]    ▶ dense-ol4.5-sglang-rep1（直連 http://node-33:30000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:37:26]      success 100.0% · 1799 tok/s · P95 12.0s · tokens 561701 · client_time real=312.610 user=35.062 sys=4.161
+[2026-09-29 19:38:26]    ▶ dense-ol4.5-vllm-rep1（直連 http://node-04:36000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:43:41]      success 100.0% · 1798 tok/s · P95 11.6s · tokens 562399 · client_time real=314.153 user=34.492 sys=5.349
+[2026-09-29 19:44:41]    ▶ dense-ol4.5-vllm-rep2（直連 http://node-04:36000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:49:54]      success 100.0% · 1798 tok/s · P95 11.4s · tokens 560989 · client_time real=313.458 user=35.055 sys=5.400
+[2026-09-29 19:50:54]    ▶ dense-ol4.5-sglang-rep2（直連 http://node-33:30000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:56:08]      success 100.0% · 1803 tok/s · P95 11.9s · tokens 561824 · client_time real=312.897 user=34.842 sys=4.337
+[2026-09-29 19:57:08]    ▶ dense-ol4.5-sglang-rep3（直連 http://node-33:30000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 20:02:15]      success 100.0% · 1838 tok/s · P95 12.0s · tokens 562312 · client_time real=307.241 user=35.169 sys=4.237
+[2026-09-29 20:03:15]    ▶ dense-ol4.5-vllm-rep3（直連 http://node-04:36000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 20:08:22]      success 100.0% · 1831 tok/s · P95 11.9s · tokens 560835 · client_time real=306.671 user=34.644 sys=5.277
+[2026-09-29 20:08:32] ✅ Phase dense / ol4.5 完成
+[2026-09-29 20:08:32] ════ Phase dense / ol8 ════
+[2026-09-29 20:08:32]    🚀 dense-sglang-ol8 派送 Job 455439
+[2026-09-29 20:08:33]    🚀 dense-vllm-ol8 派送 Job 455440
+[2026-09-29 20:14:33]    ✅ Job 455439 READY @ node-04:30000
+[2026-09-29 20:14:33]    ✅ Job 455440 READY @ node-33:36000
+[2026-09-29 20:14:33]    🔗 直連 abrep-dense-sglang → http://node-04:30000/v1（served model <models>/Qwen3.8-27B）
+[2026-09-29 20:14:33]    🔗 直連 abrep-dense-vllm → http://node-33:36000/v1（served model <models>/Qwen3.8-27B）
+[2026-09-29 20:14:33]    ▶ dense-ol8-sglang-warmup（直連 http://node-04:30000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 20:14:37]      success 100.0% · 1712 tok/s · P95 2.3s · tokens 4096 · client_time real=3.689 user=0.291 sys=0.080
+[2026-09-29 20:14:37]    ▶ dense-ol8-vllm-warmup（直連 http://node-33:36000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 20:14:39]      success 100.0% · 2022 tok/s · P95 2.0s · tokens 4096 · client_time real=2.364 user=0.305 sys=0.059
+[2026-09-29 20:15:39]    ▶ dense-ol8-sglang-rep1（直連 http://node-04:30000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:20:51]      success 100.0% · 3205 tok/s · P95 17.4s · tokens 995008 · client_time real=311.888 user=64.331 sys=7.458
+[2026-09-29 20:21:51]    ▶ dense-ol8-vllm-rep1（直連 http://node-33:36000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:27:03]      success 100.0% · 3204 tok/s · P95 16.5s · tokens 996837 · client_time real=311.454 user=63.826 sys=9.618
+[2026-09-29 20:28:03]    ▶ dense-ol8-vllm-rep2（直連 http://node-33:36000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:33:17]      success 100.0% · 3187 tok/s · P95 16.8s · tokens 997375 · client_time real=314.254 user=62.321 sys=9.487
+[2026-09-29 20:34:17]    ▶ dense-ol8-sglang-rep2（直連 http://node-04:30000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:39:30]      success 100.0% · 3196 tok/s · P95 17.2s · tokens 997129 · client_time real=312.343 user=62.574 sys=9.282
+[2026-09-29 20:40:30]    ▶ dense-ol8-sglang-rep3（直連 http://node-04:30000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:45:39]      success 100.0% · 3240 tok/s · P95 17.5s · tokens 995366 · client_time real=308.587 user=65.047 sys=7.592
+[2026-09-29 20:46:39]    ▶ dense-ol8-vllm-rep3（直連 http://node-33:36000/v1，2400 併發 × 2400 筆 × max_tokens 500）
+[2026-09-29 20:51:49]      success 100.0% · 3224 tok/s · P95 16.8s · tokens 996207 · client_time real=310.378 user=63.463 sys=9.467
+[2026-09-29 20:52:04] ✅ Phase dense / ol8 完成
+[2026-09-29 20:52:04] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 20:52:25]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 20:52:25] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260929-openloop-direct/summary.md
+[2026-09-29 20:52:25] 🏁 全部完成
+[2026-09-29 20:52:25] ▶ run_ab_repeats.sh 開始（run 20260929-openloop-direct）
+[2026-09-29 20:52:26] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 moe、回合 ol3,ol6、每條件 3 次）
+[2026-09-29 20:52:26] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 20:52:26] ════ Phase moe / ol3 ════
+[2026-09-29 20:52:27]    🚀 moe-sglang-ol3 派送 Job 456187
+[2026-09-29 20:52:27]    🚀 moe-vllm-ol3 派送 Job 456188
+[2026-09-29 21:13:25]    ❌ Job 456187 已結束且未就緒（見 <repo>/engines/_abrep-moe-sglang/logs/）
+[2026-09-29 21:13:25]    🔁 moe-sglang 啟動失敗於 node-40，排除該節點後重新派送
+[2026-09-29 21:13:25]    🚀 moe-sglang-ol3 重新派送 Job 456346
+[2026-09-29 21:17:06]    ✅ Job 456346 READY @ node-42:32000
+[2026-09-29 21:17:06]    ✅ Job 456188 READY @ node-25:37000
+[2026-09-29 21:17:06]    🔗 直連 abrep-moe-sglang → http://node-42:32000/v1（served model <models>/Qwen3.8-Flash-Next-FP8）
+[2026-09-29 21:17:06]    🔗 直連 abrep-moe-vllm → http://node-25:37000/v1（served model <models>/Qwen3.8-Flash-Next-FP8）
+[2026-09-29 21:17:06]    ▶ moe-ol3-sglang-warmup（直連 http://node-42:32000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 21:17:10]      success 100.0% · 1732 tok/s · P95 2.3s · tokens 4096 · client_time real=3.730 user=0.310 sys=0.070
+[2026-09-29 21:17:10]    ▶ moe-ol3-vllm-warmup（直連 http://node-25:37000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 21:17:11]      success 100.0% · 3176 tok/s · P95 1.2s · tokens 4096 · client_time real=1.641 user=0.290 sys=0.072
+[2026-09-29 21:18:12]    ▶ moe-ol3-sglang-rep1（直連 http://node-42:32000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:23:26]      success 100.0% · 1502 tok/s · P95 18.9s · tokens 471236 · client_time real=314.038 user=29.415 sys=3.565
+[2026-09-29 21:24:26]    ▶ moe-ol3-vllm-rep1（直連 http://node-25:37000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:29:40]      success 100.0% · 1503 tok/s · P95 8.4s · tokens 470163 · client_time real=314.262 user=28.851 sys=4.366
+[2026-09-29 21:30:40]    ▶ moe-ol3-vllm-rep2（直連 http://node-25:37000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:35:53]      success 100.0% · 1514 tok/s · P95 8.6s · tokens 470832 · client_time real=312.454 user=28.759 sys=4.314
+[2026-09-29 21:36:53]    ▶ moe-ol3-sglang-rep2（直連 http://node-42:32000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:42:06]      success 100.0% · 1509 tok/s · P95 19.6s · tokens 470252 · client_time real=312.946 user=29.261 sys=3.516
+[2026-09-29 21:43:06]    ▶ moe-ol3-sglang-rep3（直連 http://node-42:32000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:48:04]      success 100.0% · 1579 tok/s · P95 20.0s · tokens 470308 · client_time real=298.164 user=29.639 sys=3.721
+[2026-09-29 21:49:04]    ▶ moe-ol3-vllm-rep3（直連 http://node-25:37000/v1，900 併發 × 900 筆 × max_tokens 800）
+[2026-09-29 21:54:02]      success 100.0% · 1583 tok/s · P95 8.6s · tokens 469343 · client_time real=297.845 user=28.528 sys=4.420
+[2026-09-29 21:54:12] ✅ Phase moe / ol3 完成
+[2026-09-29 21:54:12] ════ Phase moe / ol6 ════
+[2026-09-29 21:54:13]    🚀 moe-sglang-ol6 派送 Job 456443
+[2026-09-29 21:54:13]    🚀 moe-vllm-ol6 派送 Job 456444
+[2026-09-29 21:58:13]    ✅ Job 456443 READY @ node-05:32000
+[2026-09-29 21:59:54]    ✅ Job 456444 READY @ node-06:37000
+[2026-09-29 21:59:54]    🔗 直連 abrep-moe-sglang → http://node-05:32000/v1（served model <models>/Qwen3.8-Flash-Next-FP8）
+[2026-09-29 21:59:54]    🔗 直連 abrep-moe-vllm → http://node-06:37000/v1（served model <models>/Qwen3.8-Flash-Next-FP8）
+[2026-09-29 21:59:54]    ▶ moe-ol6-sglang-warmup（直連 http://node-05:32000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 21:59:58]      success 100.0% · 2243 tok/s · P95 1.7s · tokens 4096 · client_time real=3.076 user=0.291 sys=0.086
+[2026-09-29 21:59:58]    ▶ moe-ol6-vllm-warmup（直連 http://node-06:37000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 21:59:59]      success 100.0% · 2850 tok/s · P95 1.4s · tokens 4096 · client_time real=1.775 user=0.295 sys=0.073
+[2026-09-29 22:00:59]    ▶ moe-ol6-sglang-rep1（直連 http://node-05:32000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:06:42]      success 100.0% · 2749 tok/s · P95 79.0s · tokens 941660 · client_time real=342.921 user=66.713 sys=7.390
+[2026-09-29 22:07:42]    ▶ moe-ol6-vllm-rep1（直連 http://node-06:37000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:12:53]      success 100.0% · 3042 tok/s · P95 12.0s · tokens 939751 · client_time real=310.266 user=57.117 sys=8.596
+[2026-09-29 22:13:53]    ▶ moe-ol6-vllm-rep2（直連 http://node-06:37000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:19:01]      success 100.0% · 3069 tok/s · P95 11.7s · tokens 944191 · client_time real=308.192 user=58.933 sys=8.906
+[2026-09-29 22:20:01]    ▶ moe-ol6-sglang-rep2（直連 http://node-05:32000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:25:44]      success 100.0% · 2752 tok/s · P95 80.3s · tokens 937708 · client_time real=342.230 user=66.984 sys=9.157
+[2026-09-29 22:26:44]    ▶ moe-ol6-sglang-rep3（直連 http://node-05:32000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:32:31]      success 100.0% · 2729 tok/s · P95 89.0s · tokens 943909 · client_time real=347.264 user=68.756 sys=7.514
+[2026-09-29 22:33:31]    ▶ moe-ol6-vllm-rep3（直連 http://node-06:37000/v1，1800 併發 × 1800 筆 × max_tokens 800）
+[2026-09-29 22:38:32]      success 100.0% · 3122 tok/s · P95 11.9s · tokens 939715 · client_time real=301.406 user=57.774 sys=9.021
+[2026-09-29 22:38:43] ✅ Phase moe / ol6 完成
+[2026-09-29 22:38:43] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-29 22:39:05]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-29 22:39:05] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260929-openloop-direct/summary.md
+[2026-09-29 22:39:05] 🏁 全部完成
+[2026-09-29 22:39:05] ▶ run_ab_repeats.sh 開始（run 20260929-openloop-direct）
+[2026-09-29 22:39:06] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 kda、回合 ol2.5,ol4.5、每條件 3 次）
+[2026-09-29 22:39:06] ↩️  續跑既有 run（已記錄於 manifest.txt）
+[2026-09-29 22:39:06] ════ Phase kda / ol2.5 ════
+[2026-09-29 22:39:07]    🚀 kda-sglang-ol2.5 派送 Job 457250
+[2026-09-29 22:39:07]    🚀 kda-vllm-ol2.5 派送 Job 457251
+[2026-09-29 22:45:27]    ✅ Job 457250 READY @ node-38:35000
+[2026-09-29 22:48:28]    ✅ Job 457251 READY @ node-22:38000
+[2026-09-29 22:48:28]    🔗 直連 abrep-kda-sglang → http://node-38:35000/v1（served model <models>/GLM-5.3-Flash）
+[2026-09-29 22:48:28]    🔗 直連 abrep-kda-vllm → http://node-22:38000/v1（served model <models>/GLM-5.3-Flash）
+[2026-09-29 22:48:28]    ▶ kda-ol2.5-sglang-warmup（直連 http://node-38:35000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 22:48:31]      success 100.0% · 2195 tok/s · P95 1.8s · tokens 4096 · client_time real=3.212 user=0.320 sys=0.085
+[2026-09-29 22:48:31]    ▶ kda-ol2.5-vllm-warmup（直連 http://node-22:38000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 22:48:34]      success 100.0% · 1655 tok/s · P95 2.4s · tokens 4096 · client_time real=2.834 user=0.301 sys=0.066
+[2026-09-29 22:49:34]    ▶ kda-ol2.5-sglang-rep1（直連 http://node-38:35000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 22:54:44]      success 100.0% · 1783 tok/s · P95 23.3s · tokens 551034 · client_time real=309.476 user=34.209 sys=4.990
+[2026-09-29 22:55:44]    ▶ kda-ol2.5-vllm-rep1（直連 http://node-22:38000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 23:00:53]      success 100.0% · 1783 tok/s · P95 14.3s · tokens 549098 · client_time real=309.380 user=32.160 sys=5.025
+[2026-09-29 23:01:53]    ▶ kda-ol2.5-vllm-rep2（直連 http://node-22:38000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 23:07:03]      success 100.0% · 1774 tok/s · P95 14.2s · tokens 548158 · client_time real=309.529 user=31.751 sys=4.957
+[2026-09-29 23:08:03]    ▶ kda-ol2.5-sglang-rep2（直連 http://node-38:35000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 23:13:15]      success 100.0% · 1781 tok/s · P95 25.2s · tokens 553247 · client_time real=312.027 user=34.547 sys=4.252
+[2026-09-29 23:14:15]    ▶ kda-ol2.5-sglang-rep3（直連 http://node-38:35000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 23:19:11]      success 100.0% · 1860 tok/s · P95 25.5s · tokens 550440 · client_time real=296.269 user=34.583 sys=4.301
+[2026-09-29 23:20:11]    ▶ kda-ol2.5-vllm-rep3（直連 http://node-22:38000/v1，750 併發 × 750 筆 × max_tokens 800）
+[2026-09-29 23:25:07]      success 100.0% · 1864 tok/s · P95 14.6s · tokens 548927 · client_time real=296.009 user=32.271 sys=5.115
+[2026-09-29 23:25:43] ✅ Phase kda / ol2.5 完成
+[2026-09-29 23:25:43] ════ Phase kda / ol4.5 ════
+[2026-09-29 23:25:43]    🚀 kda-sglang-ol4.5 派送 Job 458024
+[2026-09-29 23:25:44]    🚀 kda-vllm-ol4.5 派送 Job 458025
+[2026-09-29 23:30:04]    ✅ Job 458024 READY @ node-38:35000
+[2026-09-29 23:31:24]    ✅ Job 458025 READY @ node-22:38000
+[2026-09-29 23:31:24]    🔗 直連 abrep-kda-sglang → http://node-38:35000/v1（served model <models>/GLM-5.3-Flash）
+[2026-09-29 23:31:24]    🔗 直連 abrep-kda-vllm → http://node-22:38000/v1（served model <models>/GLM-5.3-Flash）
+[2026-09-29 23:31:24]    ▶ kda-ol4.5-sglang-warmup（直連 http://node-38:35000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 23:31:27]      success 100.0% · 2351 tok/s · P95 1.6s · tokens 4096 · client_time real=3.079 user=0.314 sys=0.063
+[2026-09-29 23:31:27]    ▶ kda-ol4.5-vllm-warmup（直連 http://node-22:38000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 23:31:30]      success 100.0% · 2283 tok/s · P95 1.8s · tokens 4096 · client_time real=2.138 user=0.292 sys=0.077
+[2026-09-29 23:32:30]    ▶ kda-ol4.5-sglang-rep1（直連 http://node-38:35000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-29 23:38:05]      success 100.0% · 2965 tok/s · P95 45.7s · tokens 992859 · client_time real=335.268 user=61.909 sys=9.661
+[2026-09-29 23:39:05]    ▶ kda-ol4.5-vllm-rep1（直連 http://node-22:38000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-29 23:44:23]      success 100.0% · 3126 tok/s · P95 19.0s · tokens 989281 · client_time real=317.836 user=57.210 sys=9.118
+[2026-09-29 23:45:23]    ▶ kda-ol4.5-vllm-rep2（直連 http://node-22:38000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-29 23:50:39]      success 100.0% · 3135 tok/s · P95 19.2s · tokens 987518 · client_time real=316.441 user=57.667 sys=9.034
+[2026-09-29 23:51:39]    ▶ kda-ol4.5-sglang-rep2（直連 http://node-38:35000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-29 23:57:23]      success 100.0% · 2882 tok/s · P95 57.6s · tokens 989908 · client_time real=343.878 user=64.065 sys=8.055
+[2026-09-29 23:58:24]    ▶ kda-ol4.5-sglang-rep3（直連 http://node-38:35000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-30 00:04:05]      success 100.0% · 2918 tok/s · P95 57.0s · tokens 993099 · client_time real=341.643 user=63.695 sys=8.020
+[2026-09-30 00:05:05]    ▶ kda-ol4.5-vllm-rep3（直連 http://node-22:38000/v1，1350 併發 × 1350 筆 × max_tokens 800）
+[2026-09-30 00:10:15]      success 100.0% · 3201 tok/s · P95 19.2s · tokens 990883 · client_time real=310.014 user=58.846 sys=9.249
+[2026-09-30 00:10:51] ✅ Phase kda / ol4.5 完成
+[2026-09-30 00:10:51] 🔄 重啟 Gateway（重新產生路由；約 10 秒中斷）
+[2026-09-30 00:11:14]    ⚠️ start_background.sh 回傳非 0（可能是實測模型失敗），改以 VM 端別名檢查為準
+[2026-09-30 00:11:14] 📊 彙整完成：<repo>/benchmarks/results/repeats/20260929-openloop-direct/summary.md
+[2026-09-30 00:11:14] 🏁 全部完成

@@ -1,0 +1,22 @@
+[2026-09-29 19:00:54] ▶ run_ab_repeats.sh 開始（run 20260929-openloop-direct）
+[2026-09-29 19:00:55] ✅ 前置檢查通過（節點 login-01、VM client-vm、模型 dense、回合 ol4.5,ol8、每條件 3 次）
+[2026-09-29 19:00:57] 🔏 背景計算 SIF sha256 → image_sha256.txt
+[2026-09-29 19:00:58] ════ Phase dense / ol4.5 ════
+[2026-09-29 19:00:58]    🚀 dense-sglang-ol4.5 派送 Job 455030
+[2026-09-29 19:00:59]    🚀 dense-vllm-ol4.5 派送 Job 455031
+[2026-09-29 19:06:59]    ✅ Job 455030 READY @ node-04:30000
+[2026-09-29 19:06:59]    ✅ Job 455031 READY @ node-04:36000
+[2026-09-29 19:06:59]    🔗 直連 abrep-dense-sglang → http://node-04:30000/v1（served model Qwen/Qwen3.8-27B-FP8）
+[2026-09-29 19:06:59]    🔗 直連 abrep-dense-vllm → http://node-04:36000/v1（served model Qwen/Qwen3.8-27B-vLLM）
+[2026-09-29 19:06:59]    ▶ dense-ol4.5-sglang-warmup（直連 http://node-04:30000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 19:07:02]      success 100.0% · 2067 tok/s · P95 1.9s · tokens 4096 · client_time real=3.280 user=0.296 sys=0.084
+[2026-09-29 19:07:02]    ▶ dense-ol4.5-vllm-warmup（直連 http://node-04:36000/v1，64 併發 × 64 筆 × max_tokens 64）
+[2026-09-29 19:07:03]      success 0.0% · 0 tok/s · P95 0.0s · tokens 0 · client_time real=0.460 user=0.293 sys=0.070
+[2026-09-29 19:08:03]    ▶ dense-ol4.5-sglang-rep1（直連 http://node-04:30000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:13:16]      success 100.0% · 1799 tok/s · P95 12.2s · tokens 561887 · client_time real=312.623 user=34.867 sys=5.019
+[2026-09-29 19:14:16]    ▶ dense-ol4.5-vllm-rep1（直連 http://node-04:36000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:19:20]      success 0.0% · 0 tok/s · P95 0.0s · tokens 0 · client_time real=303.874 user=1.962 sys=0.212
+[2026-09-29 19:20:20]    ▶ dense-ol4.5-vllm-rep2（直連 http://node-04:36000/v1，1350 併發 × 1350 筆 × max_tokens 500）
+[2026-09-29 19:24:03] ⚠️ 收到中斷訊號
+[2026-09-29 19:24:03] 🧹 中止時取消 Job 455030
+[2026-09-29 19:24:03] 🧹 中止時取消 Job 455031

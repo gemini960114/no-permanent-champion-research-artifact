@@ -1,0 +1,36 @@
+{
+  "concurrency": 900,
+  "total_requests": 900,
+  "total_duration": 313.6348706961144,
+  "success_count": 900,
+  "failure_count": 0,
+  "success_rate": 100.0,
+  "qps": 2.869578876871838,
+  "tps": 1502.498746246197,
+  "total_tokens": 471236,
+  "avg_latency": 11.370703551151221,
+  "p50_latency": 11.90797679615207,
+  "p90_latency": 17.568746690871194,
+  "p95_latency": 18.925148462876678,
+  "p99_latency": 21.882152823964134,
+  "min_latency": 1.2785102599300444,
+  "max_latency": 28.21945388801396,
+  "model_stats": {
+    "<models>/Qwen3.8-Flash-Next-FP8": {
+      "total": 900,
+      "success": 900,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_latency": 11.370703551151221,
+      "p95_latency": 18.925148462876678,
+      "avg_tokens": 523.5955555555555
+    }
+  },
+  "ttft_p50": 0.22549018100835383,
+  "ttft_p95": 0.44383620005100965,
+  "tpot_p50": 0.021097990238914163,
+  "tpot_p95": 0.027250806343468343,
+  "arrival_rate": 3.0,
+  "seed": 1,
+  "offered_span_s": 307.5529327245626
+}

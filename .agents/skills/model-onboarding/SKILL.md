@@ -1,0 +1,129 @@
+---
+name: model-onboarding
+license: MIT
+description: >-
+  評估 Hugging Face 模型能否部署到 NCHC H200 參集：當使用者貼上 HF 模型 URL
+  並要求評估可行性、選擇 vLLM 或 SGLang、docker image 版本、啟動參數，
+  或要求比較模型／建成 engines/ 模組時使用。涵蓋引擎原生支援實測、
+  硬體記憶體計算（4×/8×H200）、啟動參數草案；未經使用者明確同意
+  絕不建立模組或下載權重。
+---
+
+# 模型上線評估 (Model Onboarding Review)
+
+## 鐵律
+
+1. **實測優先**：引擎支援與參數合法性用 `scripts/` 內的工具查證，**不猜、不盡信 model card**
+   （實錄：Step-5 card 寫 `--reasoning-parser stepfun`，實測 SGLang 0.5.20 無此選項，正確值 `step3p5`）
+2. **同意才動工**：使用者明確說「可以／做吧／建模」等，才建立 engines 模組或下載權重；
+   徵求同意時揭露成本（磁碟、下載時間、驗證 GPU 時數）
+3. **誠實的硬體結論**：只能是「✅ 直接上／🟡 等量化版／❌ 不可行（建議 API 接入）」三選一
+
+## 工作流程
+
+### Step 1：收集模型事實（抓 model card）
+必查：總參數／激活參數（MoE?）、精度與檔案大小、架構（dense／MoE／hybrid mamba／
+**VLM**）、context length、**是否 gated（HF 條款）**、License 限制。
+
+**官方部署文件是第一優先參數來源**（實錄兩戰 A/B 全靠它）：model card 的
+「Serving / Deploy」章節會給 **SGLang Cookbook** 與 **vLLM Recipe** 連結——**先抓這兩份
+官方文件抄參數，不要自己猜**（實錄：vLLM Recipe 明載 Flash-Next「純 TP 與 FP8 128-寬
+量化塊不相容，必須 TEP」、「max-num-seqs 低於 256 會啟動錯誤」、「MTP 於 H100 實測
+變慢勿開」——三個地雷全靠文件避開）。
+
+**model card 沒給連結時，依 URL 模式主動推導並嘗試**（兩者皆已實證存在於主流模型，
+GLM/Qwen 全系列都有；404 才視為無官方文件）：
+
+| 來源 | URL 模式（HF repo = `<org>/<model>`） | 實證 |
+| :--- | :--- | :--- |
+| vLLM Recipe | `https://recipes.vllm.ai/<org>/<model>` | Qwen3.8-27B／Flash-Next／GLM-5.3-Flash ✓ |
+| SGLang Cookbook | `https://docs.sglang.io/cookbook/autoregressive/<org>/<model>` | Qwen3.8-27B／GLM-5.3-Flash ✓ |
+
+⚠️ **Recipe/Cookbook 存在 ≠ 我們的 image 支援**：官方文件可能要求更新版框架或專用
+docker build（實錄：GLM-5.3-Flash 的 vLLM Recipe 存在，但要求 vLLM 0.29.0+ docker 版
+＋FlashInfer ≥0.6.17——`check_engine_support.sh` 查的是**我們的 image**，兩者都要查，
+以 Step 6 煙霧測試為最終裁決）。
+
+**使用者直接提供連結時的分工**（任何子集都適用；缺的依上表推導補齊）：
+
+| 輸入 | 用途 | 產出 |
+| :--- | :--- | :--- |
+| HF model card | 模型事實（本 Step 必查欄位）＋官方文件連結 | 硬體結論、框架初判 |
+| vLLM Recipe | **vLLM 參數草案＋最低版本需求＋地雷**（TP/EP 相容、cap 下限、MTP 開關、kernel 版本耦合） | Step 4 的 vLLM 參數表 |
+| SGLang Cookbook | **SGLang 參數草案＋版本需求＋地雷** | Step 4 的 SGLang 參數表 |
+
+三份到齊 → Step 2 實測我們的 image → Step 4 雙框架參數**並列**＋對照組建議。
+參數以兩份官方文件為準，**不要混抄**（同一模型兩框架的 TP/EP/parser/投機解碼設定經常不同）。
+
+### Step 2：實測引擎支援（跑腳本，別徒手）
+```bash
+# 於 repo 根目錄執行（或改用絕對路徑 <repo>/...）
+.agents/skills/model-onboarding/scripts/check_engine_support.sh <架構關鍵字>
+# 檢查三個現有 image (sglang 0.5.19/0.5.20, vllm 0.29.1rc1) 的模型檔
+# ＋ reasoning-parser 合法選項 (DetectorMap)
+```
+- 模型檔存在＝必要非充分條件，最終以 Step 6 煙霧測試為準
+- **版本決策流（政策 C；「下週出了 0.5.21」情境）**：
+  ```
+  新模型上門 → check_engine_support.sh 查「現有 image」
+    ├─ ✅ 支援   → 沿用現有 SIF（零下載；既有引擎零影響）
+    └─ ❌ 不支援 → 依 Recipe/Cookbook 查「最低支援版本」
+                   → ./pull_image.sh <版本標籤> <docker-image-uri>（新檔名進場，預設不覆寫、--force 才覆寫；來源須為固定標籤或 @sha256）
+  既有已驗證引擎 → 一律不自動升級（沿用原版；升級＝自願＋逐一切換＋重新驗證）
+  ```
+  注意「最低支援版本」優先於「最新版」（KNOWN_GOOD 選版原則）——支援在 0.5.20.3
+  就進了卻拉 0.5.21，只是多引入未驗證的變數。
+- **重拉 image 一律走版本政策 C**：`./pull_image.sh <版本標籤> <docker-image-uri>` 輸出新檔名、預設不覆寫既有 SIF（--force 才覆寫；舊版 standby）；來源不得為 :latest/:nightly，完成後寫 `<sif>.manifest` 記錄來源與 SHA-256；引擎切換＝config.env 改 SIF_PATH→validate→更新 KNOWN_GOOD（詳 ENGINE_LIFECYCLE_GUIDE §5）
+
+### Step 3：硬體適配計算（跑腳本）
+```bash
+.agents/skills/model-onboarding/scripts/estimate_fit.py --params <總參數B> --precision <bf16|fp8|int4>
+# 例：--params 604 --precision fp8 --active 27 --extra-gb 20（--extra-gb＝多模態視覺塔等額外顯存）
+# 自動對照 4×H200 (564GB) / 8×H200 (1,128GB) / df 磁碟剩餘
+```
+人工再加計：TP8/EP8 通訊緩衝（5-10%）、KV cache 預留（≥20-30%，腳本已含 25% 保守值）。
+
+### Step 4：輸出評估報告（必含）
+- 框架建議（**附實測證據**：腳本輸出摘要）
+- 記憶體計算表、image 版本
+- 啟動參數草案：TP/EP、context-length 現實值（官方值通常是理想值）、
+  reasoning-parser（**實測合法值**）、MAX_RUNNING_REQUESTS 初始 64、HEALTH_TIMEOUT
+- 埠位分配（以各引擎 config.env 為準；現用：27b=30000、flash=32000、step5=34000、glm53=35000、vllm-qwen27b=36000、vllm-flash-next=37000）
+- **雙框架都支援時，建議兩個都建對照組實測再選**（engines/ 已有四個有憑有據範本：
+  `sglang-qwen-27b`／`vllm-qwen27b`（dense 單卡型）、`sglang-qwen-flash`／
+  `vllm-flash-next`（MoE TEP4 型）——A/B 兩戰實證**框架優勢隨架構翻轉**：
+  27B dense → SGLang 勝 6%；Flash-Next MoE → vLLM 勝 2.33×。不實測無法預知）
+- **不部署替代方案**（官方 API）與成本預估（下載時間／磁碟／GPU 時數）
+
+### Step 5：等待明確同意 ⚠️（見鐵律 2）
+
+### Step 6：建成 engines 模組
+```bash
+./new_engine.sh <框架>-<模型>-<精度> --from <最接近原型>
+# → 改 config.env(.example)：模型名/埠/TP/參數/金鑰沿用
+# → 改 *server.slurm：GPU 數/CPU/mem/啟動參數（合法性已於 Step 2 驗證）
+# → 寫引擎 README（規格、參數理由、硬體評估摘要、狀態）
+# → ./download_model.sh → ./validate_engine.sh <名稱> → ./start_models.sh <名稱>
+# → 更新 engines/KNOWN_GOOD.md ＋ 本 skill README.md 的評估記錄表
+```
+- 目錄命名：`sglang-<模型>-<精度>`；job-name 為底線版本
+- **VLM 模組煙霧驗證必加一筆帶圖片的請求**（`validate_engine.sh` 只測文字，需手動補）：
+  ```bash
+  curl -s -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+    -d '{"model":"<MODEL_NAME>","messages":[{"role":"user","content":[
+      {"type":"image_url","image_url":{"url":"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG"}},
+      {"type":"text","text":"圖片裡是什麼動物？"}]}],"max_tokens":64}' \
+    "http://<引擎IP>:<PORT>/v1/chat/completions"
+  ```
+- `--trust-remote-code` 僅用於官方／可信任 repo（鏡像需核對出處）
+
+### Step 7：建模完成後——帶使用者走「上線五步」教學
+
+模組建好 ≠ 上線。務必依 README.md 的〈上線五步教學〉帶使用者完成：
+① `config.env` 確認（金鑰沿用共用 `SGLANG_API_KEY`；**HF_TOKEN：gated 模型必須、
+非 gated 建議帶**——避免匿名限流，下載更穩）
+② 下載權重（`nohup` 背景執行；告知磁碟需求、預估時間與完成判斷）
+③ `./validate_engine.sh <引擎>`（VLM 模組含帶圖測試）
+④ `./start_models.sh <引擎>` 上線（可加 `--account <計畫代號>` 指定 wallet 計費，未指定沿用 config.env 的 `SLURM_ACCOUNT`）
+⑤ `./healthcheck.sh`＋外部路徑抽測驗收
+最後更新 KNOWN_GOOD 與本 skill 的評估記錄表。

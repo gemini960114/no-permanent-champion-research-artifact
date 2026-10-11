@@ -1,0 +1,105 @@
+(APIServer pid=2813367) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(APIServer pid=2813367) [transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+(EngineCore pid=2813869) Process EngineCore:
+(EngineCore pid=2813869) Traceback (most recent call last):
+(EngineCore pid=2813869)   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+(EngineCore pid=2813869)     self.run()
+(EngineCore pid=2813869)   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+(EngineCore pid=2813869)     self._target(*self._args, **self._kwargs)
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1438, in run_engine_core
+(EngineCore pid=2813869)     raise e
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1396, in run_engine_core
+(EngineCore pid=2813869)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=2813869)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(EngineCore pid=2813869)     return func(*args, **kwargs)
+(EngineCore pid=2813869)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1155, in __init__
+(EngineCore pid=2813869)     super().__init__(
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 138, in __init__
+(EngineCore pid=2813869)     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=2813869)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(EngineCore pid=2813869)     return func(*args, **kwargs)
+(EngineCore pid=2813869)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py", line 113, in __init__
+(EngineCore pid=2813869)     self._init_executor()
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py", line 69, in _init_executor
+(EngineCore pid=2813869)     self.driver_worker.init_device()
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/worker_base.py", line 353, in init_device
+(EngineCore pid=2813869)     self.worker.init_device()  # type: ignore
+(EngineCore pid=2813869)     ^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(EngineCore pid=2813869)     return func(*args, **kwargs)
+(EngineCore pid=2813869)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py", line 456, in init_device
+(EngineCore pid=2813869)     self.requested_memory = request_memory(init_snapshot, self.cache_config)
+(EngineCore pid=2813869)                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=2813869)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/utils.py", line 542, in request_memory
+(EngineCore pid=2813869)     raise ValueError(
+(EngineCore pid=2813869) ValueError: Free memory on device cuda:0 (6.04/139.8 GiB) on startup is less than desired GPU memory utilization (0.92, 128.62 GiB). Decrease GPU memory utilization or reduce GPU memory used by other processes.
+[rank0]:[W929 15:41:04.935765778 ProcessGroupNCCL.cpp:1624] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+(APIServer pid=2813367) Traceback (most recent call last):
+(APIServer pid=2813367)   File "/usr/local/bin/vllm", line 10, in <module>
+(APIServer pid=2813367)     sys.exit(main())
+(APIServer pid=2813367)              ^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/cli/main.py", line 106, in main
+(APIServer pid=2813367)     args.dispatch_function(args)
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/cli/serve.py", line 154, in cmd
+(APIServer pid=2813367)     uvloop.run(run_server(args))
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=2813367)     return __asyncio.run(
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+(APIServer pid=2813367)     return runner.run(main)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=2813367)     return self._loop.run_until_complete(task)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=2813367)     return await main
+(APIServer pid=2813367)            ^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/launchers/api_server/entry.py", line 172, in run_server
+(APIServer pid=2813367)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/launchers/api_server/entry.py", line 185, in run_server_worker
+(APIServer pid=2813367)     async with build_async_engine_client(
+(APIServer pid=2813367)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2813367)     return await anext(self.gen)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/launchers/api_server/entry.py", line 58, in build_async_engine_client
+(APIServer pid=2813367)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=2813367)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2813367)     return await anext(self.gen)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/launchers/api_server/entry.py", line 92, in build_async_engine_client_from_engine_args
+(APIServer pid=2813367)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=2813367)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py", line 245, in from_vllm_config
+(APIServer pid=2813367)     return cls(
+(APIServer pid=2813367)            ^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py", line 177, in __init__
+(APIServer pid=2813367)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=2813367)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(APIServer pid=2813367)     return func(*args, **kwargs)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 167, in make_async_mp_client
+(APIServer pid=2813367)     return AsyncMPClient(
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(APIServer pid=2813367)     return func(*args, **kwargs)
+(APIServer pid=2813367)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 1094, in __init__
+(APIServer pid=2813367)     super().__init__(
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 668, in __init__
+(APIServer pid=2813367)     with launch_core_engines(
+(APIServer pid=2813367)   File "/usr/lib/python3.12/contextlib.py", line 144, in __exit__
+(APIServer pid=2813367)     next(self.gen)
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py", line 1229, in launch_core_engines
+(APIServer pid=2813367)     wait_for_engine_startup(
+(APIServer pid=2813367)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py", line 1309, in wait_for_engine_startup
+(APIServer pid=2813367)     raise RuntimeError(
+(APIServer pid=2813367) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+INFO:    Terminating squashfuse_ll after timeout
+INFO:    Timeouts can be caused by a running background process

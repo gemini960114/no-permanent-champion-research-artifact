@@ -1,0 +1,57 @@
+╭──────────────────────────────────────────────────────────╮
+│ 🚀 開始壓力測試配置                                      │
+│ • 目標端點: http://node-04:36000/v1/chat/completions │
+│ • 並發人數 (Concurrency): 64                             │
+│ • 總請求數 (Total Requests): 64                          │
+│ • 單次 Token 上限 (Max Tokens): 64                       │
+│ • 輪流分流模型: Qwen/Qwen3.8-27B-vLLM                    │
+╰──────────────────────────────────────────────────────────╯
+推論進度:   0%|                                                   | 0/64 [00:00<?, ?req/s]推論進度:  62%|█████████████████████████▋               | 40/64 [00:00<00:00, 397.34req/s]推論進度: 100%|█████████████████████████████████████████| 64/64 [00:00<00:00, 507.68req/s]
+
+
+    📊 LiteLLM & SGLang H200 壓力測試成果報告    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ 指標項目 (Metric)          ┃ 測試數據 (Value) ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ 並發人數 (Concurrency)     │ 64 人            │
+├────────────────────────────┼──────────────────┤
+│ 總請求數 (Total Requests)  │ 64 筆            │
+├────────────────────────────┼──────────────────┤
+│ 成功次數 (Success Count)   │ 0 筆 (0.0%)      │
+├────────────────────────────┼──────────────────┤
+│ 失敗次數 (Failed Count)    │ 64 筆 (100.0%)   │
+├────────────────────────────┼──────────────────┤
+│ 總執行耗時 (Total Time)    │ 0.13 秒          │
+├────────────────────────────┼──────────────────┤
+│ 整體請求吞吐量 (QPS / RPS) │ 0.00 req/s       │
+└────────────────────────────┴──────────────────┘
+                             🏷️ 個別模型負載分流統計                             
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┓
+┃ 模型名稱 (Model) ┃ 總請求數 ┃ 成功數 ┃ 失敗數 ┃ 成功率 ┃ 平均延遲 ┃ P95 延遲 ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━┩
+│ Qwen/Qwen3.8-27… │       64 │      0 │     64 │   0.0% │      N/A │      N/A │
+└──────────────────┴──────────┴────────┴────────┴────────┴──────────┴──────────┘
+
+⚠️ 失敗請求取樣 (最多顯示前 5 筆):
+  • Req #3 | Model: Qwen/Qwen3.8-27B-vLLM | HTTP 404 | Error: 
+{"error":{"message":"The model `Qwen/Qwen3.8-27B-vLLM` does not 
+exist.","type":"NotFoundError","param":"model","code":40
+  • Req #1 | Model: Qwen/Qwen3.8-27B-vLLM | HTTP 404 | Error: 
+{"error":{"message":"The model `Qwen/Qwen3.8-27B-vLLM` does not 
+exist.","type":"NotFoundError","param":"model","code":40
+  • Req #2 | Model: Qwen/Qwen3.8-27B-vLLM | HTTP 404 | Error: 
+{"error":{"message":"The model `Qwen/Qwen3.8-27B-vLLM` does not 
+exist.","type":"NotFoundError","param":"model","code":40
+  • Req #0 | Model: Qwen/Qwen3.8-27B-vLLM | HTTP 404 | Error: 
+{"error":{"message":"The model `Qwen/Qwen3.8-27B-vLLM` does not 
+exist.","type":"NotFoundError","param":"model","code":40
+  • Req #15 | Model: Qwen/Qwen3.8-27B-vLLM | HTTP 404 | Error: 
+{"error":{"message":"The model `Qwen/Qwen3.8-27B-vLLM` does not 
+exist.","type":"NotFoundError","param":"model","code":40
+📁 成果已儲存至 JSON: 
+<repo>/benchmarks/results/repeats/20260929-openloop
+-direct/warmup/dense-ol4.5-vllm-warmup.json
+📁 逐筆明細已儲存至 JSONL: 
+<repo>/benchmarks/results/repeats/20260929-openloop
+-direct/warmup/dense-ol4.5-vllm-warmup.jsonl（64 筆）
+client_time real=0.460 user=0.293 sys=0.070

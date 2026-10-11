@@ -1,0 +1,44 @@
+JobID|JobName|NodeList|Start|End|State|AllocTRES
+448885|abrep_dense_sglang|node-16|2026-09-28T15:38:33|2026-09-28T16:04:20|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448886|abrep_dense_vllm|node-01|2026-09-28T15:38:33|2026-09-28T16:04:20|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448918|abrep_dense_sglang|node-16|2026-09-28T16:04:31|2026-09-28T16:05:55|FAILED|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448919|abrep_dense_vllm|node-23|2026-09-28T16:04:31|2026-09-28T16:07:31|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448929|abrep_dense_sglang|node-16|2026-09-28T16:09:00|2026-09-28T16:17:24|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448930|abrep_dense_vllm|node-22|2026-09-28T16:09:00|2026-09-28T16:17:24|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448968|abrep_dense_sglang|node-16|2026-09-28T16:17:41|2026-09-28T16:47:19|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+448969|abrep_dense_vllm|node-09|2026-09-28T16:17:41|2026-09-28T16:47:19|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449017|abrep_moe_sglang|node-05|2026-09-28T16:47:30|2026-09-28T17:22:28|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+449018|abrep_moe_vllm|node-09|2026-09-28T16:47:31|2026-09-28T17:22:28|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+449145|abrep_moe_sglang|node-05|2026-09-28T17:22:39|2026-09-28T18:00:03|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+449146|abrep_moe_vllm|node-09|2026-09-28T17:22:42|2026-09-28T18:00:03|CANCELLED by UID|billing=48,cpu=48,gres/gpu=4,mem=240G,node=1
+449199|abrep_kda_sglang|node-11|2026-09-28T18:00:14|2026-09-28T18:49:34|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449200|abrep_kda_vllm|node-12|2026-09-28T18:00:16|2026-09-28T18:49:34|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449317|abrep_kda_sglang|node-20|2026-09-28T18:49:45|2026-09-28T18:50:16|FAILED|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449318|abrep_kda_vllm|node-21|2026-09-28T18:49:45|2026-09-28T18:59:40|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449340|abrep_kda_sglang|node-36|2026-09-28T19:00:10|2026-09-28T19:01:09|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449341|abrep_kda_vllm|node-20|2026-09-28T19:00:10|2026-09-28T19:00:19|FAILED|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449342|abrep_kda_sglang|node-04|2026-09-28T19:01:58|2026-09-28T20:05:52|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449343|abrep_kda_vllm|node-17|2026-09-28T19:02:00|2026-09-28T20:05:52|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449482|abrep_dense_sglang|node-28|2026-09-28T20:06:49|2026-09-28T20:40:56|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449483|abrep_dense_vllm|node-28|2026-09-28T20:06:51|2026-09-28T20:40:56|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449524|abrep_kda_sglang|node-24|2026-09-28T20:41:42|2026-09-28T21:46:18|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449525|abrep_kda_vllm|node-31|2026-09-28T20:41:42|2026-09-28T21:46:18|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449633|abprobe_c64|node-26|2026-09-28T21:47:44|2026-09-28T21:49:03|FAILED|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449634|abprobe_c80|node-27|2026-09-28T21:47:48|2026-09-28T21:54:26|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449635|abprobe_c96|node-27|2026-09-28T21:47:48|2026-09-28T21:49:24|FAILED|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449636|abprobe_c112|node-16|2026-09-28T21:47:48|2026-09-28T21:49:30|FAILED|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449649|abrep_dense_sglang|node-27|2026-09-28T21:54:36|2026-09-28T22:23:34|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449650|abrep_dense_vllm|node-27|2026-09-28T21:54:36|2026-09-28T22:23:34|CANCELLED by UID|billing=12,cpu=12,gres/gpu=1,mem=120G,node=1
+449721|abcold_kda_vllm|node-02|2026-09-28T22:24:13|2026-09-28T22:42:06|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449776|abcold_kda_vllm|node-10|2026-09-28T22:42:22|2026-09-28T23:00:37|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+449818|abcold_kda_vllm|node-10|2026-09-28T23:00:54|2026-09-28T23:15:17|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451075|abrep_kda_sglang|node-29|2026-09-29T03:24:22|2026-09-29T03:38:01|FAILED|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451076|abrep_kda_vllm|node-30|2026-09-29T03:24:22|2026-09-29T03:38:48|FAILED|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451126|abrep_kda_sglang|node-18|2026-09-29T03:40:28|2026-09-29T03:41:07|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451127|abrep_kda_vllm|node-19|2026-09-29T03:40:28|2026-09-29T03:41:07|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451129|abrep_kda_sglang|node-18|2026-09-29T03:41:28|2026-09-29T04:06:33|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451130|abrep_kda_vllm|node-19|2026-09-29T03:41:28|2026-09-29T04:06:33|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451173|abrep_kda_sglang|node-11|2026-09-29T04:07:28|2026-09-29T04:31:12|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451174|abrep_kda_vllm|node-31|2026-09-29T04:07:28|2026-09-29T04:31:12|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451279|abrep_kda_sglang|node-11|2026-09-29T04:32:13|2026-09-29T04:53:17|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
+451280|abrep_kda_vllm|node-19|2026-09-29T04:32:13|2026-09-29T04:53:17|CANCELLED by UID|billing=96,cpu=96,gres/gpu=8,mem=480G,node=1
